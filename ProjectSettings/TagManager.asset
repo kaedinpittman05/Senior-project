@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - SpawnPoint
+  - Rooms
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - door
   - Water
   - UI
   - 
