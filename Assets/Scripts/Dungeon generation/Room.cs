@@ -15,10 +15,15 @@ public class Room : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(RoomController.instance == null)
-        Debug.Log("You pressed play in the wrong scene!");
-        return;
+        if(RoomController.instance == null){
+            Debug.Log("You pressed play in the wrong scene!");
+            return;
+        }
+        
+        RoomController.instance.RegisterRoom(this);
     }
+
+    
 
     void OnDrawGizmos()
     {
