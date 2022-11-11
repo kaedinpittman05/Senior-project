@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.Callbacks;
 using UnityEditor;
 
 public class RoomNodeGraphEditor : EditorWindow
@@ -21,6 +20,14 @@ public class RoomNodeGraphEditor : EditorWindow
         GetWindow<RoomNodeGraphEditor>("Room Node Graph Editor");
         // returns the first editor window 
     }
+
+    public static bool OnDoubleClickAsset(int instanceID, int line)
+    {
+
+
+        private void OnEnable
+    }
+
 
     private void OnEnable()
     {
