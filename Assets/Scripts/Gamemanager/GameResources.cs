@@ -12,7 +12,7 @@ public class GameResources : MonoBehaviour
         {
             if (instance == null)
             {
-                instance = Resources.Load<GameResources>("GameREsourses");
+                instance = Resources.Load<GameResources>("GameResourses");
             }
             return instance;
         }

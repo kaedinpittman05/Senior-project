@@ -24,10 +24,10 @@ public class RoomNodeGraphEditor : EditorWindow
     }
 
     // Open the room node graph editor window if a room node graph scriptable object asset is double clicked in the inspector
-    [OnOpeanAsset(0)] // Need the namespace UnityEditor.Callbacks
+    [OnOpenAsset(0)] // Need the namespace UnityEditor.Callbacks
     public static bool OnDoubleClickAsset(int instanceID, int line)
     {
-        RoomNodeGraphSO roomNodeGraph = EditorUtulity.instanceIDToObject(instanceID) as RoomNodeGraphSO;
+        RoomNodeGraphSO roomNodeGraph = EditorUtility.InstanceIDToObject(instanceID) as RoomNodeGraphSO;
 
         if (roomNodeGraph != null)
         {
@@ -115,7 +115,7 @@ public class RoomNodeGraphEditor : EditorWindow
     }  
 
     // Create a room node at the mouse position 
-    private void CreateRoomNode(Object mousePositionObject)
+    private void CreateRoomNode(object mousePositionObject)
     {
         CreateRoomNode(mousePositionObject, roomNodeTypeList.list.Find(x => x.isNone));
     }  
@@ -126,13 +126,13 @@ public class RoomNodeGraphEditor : EditorWindow
         Vector2 mousePosition = (Vector2)mousePositionObject;
 
         // create room node scriptable object asset
-        RoomNodeSO roomNode = ScriptableObject.Createinstance<RoomNodeSO>();
+        RoomNodeSO roomNode = ScriptableObject.CreateInstance<RoomNodeSO>();
 
         // add room node to current room node graph room node list
         currentRoomNodeGraph.roomNodeList.Add(roomNode);
 
         // set room node values
-        roomNode.Initialise(new Rect(mousePosition, new Vector2(modeWidth, nodeHeight)), currentRoomNodeGraph, roomNodeType);
+        roomNode.Initalise(new Rect(mousePosition, new Vector2(nodeWidth, nodeHeight)), currentRoomNodeGraph, roomNodeType);
 
         // ass room node to room node graph scriptable object asset database
         AssetDatabase.AddObjectToAsset(roomNode, currentRoomNodeGraph);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class RoomNodeSO : MonoBehaviour
+public class RoomNodeSO : ScriptableObject
 {
     [HideInInspector] public string id;
     [HideInInspector] public List<string> parentRoomNodeIDList = new List<string>();
@@ -30,6 +30,46 @@ public class RoomNodeSO : MonoBehaviour
 
         // Load room node type list
         roomNodeTypeList = GameResources.Instance.roomNodeTypeList;
+    }
+
+    // draw node with the nodestyle
+    public void Draw(GUIStyle nodeStyle)
+    {
+        // Draw Node Box Using Begin Area
+        GUILayout.BeginArea(rect, nodeStyle);
+
+        // start Region to Detect Poup selection changes
+        EditorGUI.BeginChangeCheck();
+
+        // Display a popup using the RoomNodeType name values that can be selcted from (default to the currently set roomNodeType)
+
+        int selected = roomNodeTypeList.list.FindIndex(x => x == roomNodeType);
+
+        int selection = EditorGUILayout.Popup("", selected, GetRoomNodeTypesToDisplay());
+
+        roomNodeType = roomNodeTypeList.list[selection];
+
+        if (EditorGUI.EndChangeCheck())
+            EditorUtility.SetDirty(this);
+
+        GUILayout.EndArea();
+    }
+
+    // Populate a string array with the room node types to display that can be selected
+    
+    public string[] GetRoomNodeTypesToDisplay()
+    {
+        string[] roomArray = new string[roomNodeTypeList.list.Count];
+
+        for (int i = 0; i < roomNodeTypeList.list.Count; i++)
+        {
+            if (roomNodeTypeList.list[i].displayInNodeGraphEditor)
+            {
+                roomArray[i] = roomNodeTypeList.list[i].roomNodeTypeName;
+            }
+        }
+
+        return roomArray;
     }
 
 #endif
