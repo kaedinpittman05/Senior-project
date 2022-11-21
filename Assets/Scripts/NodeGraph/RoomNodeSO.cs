@@ -18,6 +18,8 @@ public class RoomNodeSO : ScriptableObject
 #if UNITY_EDITOR
 
     [HideInInspector] public Rect rect;
+    [HideInInspector] public bool isLeftClickDragging = false;
+    [HideInInspector] public bool isSelected = false;
 
     // Initalise node
     public void Initalise(Rect rect, RoomNodeGraphSO nodeGraph, RoomNodeTypeSO roomNodeType)
@@ -70,6 +72,56 @@ public class RoomNodeSO : ScriptableObject
         }
 
         return roomArray;
+    }
+
+
+    // process events for the node
+    public void ProcessEvents(Event currentEvent)
+    {
+        switch (currentEvent.type)
+        {
+            // process nouse down event
+            case EventType.MouseDown:
+                ProcessMouseDownEvent(currentEvent);
+                break;
+            // Process Mouse up Events
+            case EventType.MouseUp:
+                ProcessMouseUpEvent;
+                break;
+            // process mouse drag event
+            case EventType.MouseDrag:
+                ProcessMouseDragEvent;
+                break;
+
+            defualt:
+                break;
+        }
+    }
+
+    // Process mouse down events
+    private void ProcessMouseDownEvent(Event currentEvent)
+    {
+        // left click down
+        if (currentEvent.button == 0)
+        {
+            ProcessLeftClickDownEvent();
+        }
+    }
+
+    // process left click down event
+    private void ProcessLeftClickDownEvent()
+    {
+        selection.activeObject = this;
+
+        // Toggle node selection
+        if (isSelected == true)
+        {
+            isSelected = false;
+        }
+        else
+        {
+            isSelected = true;
+        }
     }
 
 #endif
