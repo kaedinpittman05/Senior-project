@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "RoomNodeType_", menuName = "Scriptable object/Dungeon/Room Node Type")]
+[CreateAssetMenu(fileName = "RoomNodeType_", menuName = "Scriptable Objects/Dungeon/Room Node Type")]
 public class RoomNodeTypeSO : ScriptableObject
 {
    
-   public string RoomnodeTypeName;
+   public string roomNodeTypeName;
 
    #region Header
    [Header("Only flag the RoomNodeTypes that should be visible in the editor")]
@@ -41,7 +41,7 @@ public class RoomNodeTypeSO : ScriptableObject
 #if UNITY_EDITOR
     private void OnValidate()
     {
-        HelperUtilities.ValidateCheckEmptyString(this, nameof(RoomnodeTypeName), RoomnodeTypeName );
+        HelperUtilities.ValidateCheckEmptyString(this, nameof(roomNodeTypeName), roomNodeTypeName );
     }
 #endif
     #endregion
