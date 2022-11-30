@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class RoomNodeSO : ScriptableObject
 {
-    [HideInInspector] public string id;
-    [HideInInspector] public List<string> parentRoomNodeIDList = new List<string>();
-    [HideInInspector] public List<string> childRoomNodeIDList = new List<string>();
+     public string id;
+     public List<string> parentRoomNodeIDList = new List<string>();
+     public List<string> childRoomNodeIDList = new List<string>();
     [HideInInspector] public RoomNodeGraphSO roomNodeGraph;
     public RoomNodeTypeSO roomNodeType;
     [HideInInspector] public RoomNodeTypeListSO roomNodeTypeList;
@@ -86,11 +86,11 @@ public class RoomNodeSO : ScriptableObject
                 break;
             // Process Mouse up Events
             case EventType.MouseUp:
-                ProcessMouseUpEvent;
+                ProcessMouseUpEvent(currentEvent);
                 break;
             // process mouse drag event
             case EventType.MouseDrag:
-                ProcessMouseDragEvent;
+                ProcessMouseDragEvent(currentEvent);
                 break;
 
             defualt:
@@ -106,12 +106,18 @@ public class RoomNodeSO : ScriptableObject
         {
             ProcessLeftClickDownEvent();
         }
+        // right click down
+        else if (currentEvent.button == 1)
+        {
+            ProcessRightClickDownEvent(currentEvent);
+        }
     }
 
     // process left click down event
     private void ProcessLeftClickDownEvent()
     {
-        selection.activeObject = this;
+        // returns the actual object selection
+        Selection.activeObject = this;
 
         // Toggle node selection
         if (isSelected == true)
@@ -123,7 +129,70 @@ public class RoomNodeSO : ScriptableObject
             isSelected = true;
         }
     }
+    /// Process right click down
+    private void ProcessRightClickDownEvent(Event currentEvent)
+    {
+        roomNodeGraph.SetNodeToDrawConnectionLineFrom(this, currentEvent.mousePosition);
+    }
 
+    //Process mouse up event
+    private void ProcessMouseUpEvent(Event currentEvent)
+    {
+        //If lect click up
+        if (currentEvent.button == 0)
+        {
+            ProcessLeftClickUpEvent();
+        }
+    }
+
+    // Process left click up event
+    private void ProcessLeftClickUpEvent()
+    {
+        if (isLeftClickDragging)
+        {
+            isLeftClickDragging = false;
+        }
+    }
+
+    // Process mouse drag event
+    private void ProcessMouseDragEvent(Event currentEvent)
+    {
+        //process left click event
+        if (currentEvent.button == 0)
+        {
+            ProcessLeftMouseDragEvent(currentEvent);
+        }
+    }
+
+    // Process mouse drag event
+    private void ProcessLeftMouseDragEvent(Event currentEvent)
+    {
+        isLeftClickDragging = true;
+
+        DragNode(currentEvent.delta);
+        GUI.changed = true;
+    }
+
+    // Drag node
+    public void DragNode(Vector2 delta)
+    {
+        rect.position += delta;
+        EditorUtility.SetDirty(this);
+    }
+
+    /// add childID to the node (returns true if the node has been added, false otherwise)
+    public bool AddChildRoomNodeIDToRoomNode(string childID)
+    {
+        childRoomNodeIDList.Add(childID);
+        return true;
+    }
+
+    /// add parentID to the node (returns true if the node has been added, false otherwise)
+    public bool AddParentRoomNodeIDToRoomNode(string parentID)
+    {
+        parentRoomNodeIDList.Add(parentID);
+        return true;
+    }
 #endif
 
     #endregion Editor code
