@@ -4,14 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Dungeon Rooms/BasementMain.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Dungeon Rooms/BasementStart.unity
-    guid: dd4f2723b5232344397d134b40bcdf8a
-  - enabled: 1
-    path: Assets/Scenes/Dungeon Rooms/BasementEmpty.unity
-    guid: d7880f8fed32b5941af70348038194fc
+  m_Scenes: []
   m_configObjects: {}
