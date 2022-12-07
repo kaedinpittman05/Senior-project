@@ -58,6 +58,32 @@ public class RoomNodeSO : ScriptableObject
             int selection = EditorGUILayout.Popup("", selected, GetRoomNodeTypesToDisplay());
 
             roomNodeType = roomNodeTypeList.list[selection];
+
+            //If the room type selection has changed making child connectons potentialy invalid
+            if (roomNodeTypeList.list[selected].isCorridor && !roomNodeTypeList.list[selection].isCorridor || !roomNodeTypeList.list[selected].isCorridor
+            && roomNodeTypeList.list[selection].isCorridor || !roomNodeTypeList.list[selected].isBossRoom && roomNodeTypeList.list[selection].isBossRoom)
+            {
+                if (childRoomNodeIDList.Count > 0)
+                {
+                    for (int i = childRoomNodeIDList.Count -1; i >= 0; i--)
+                    {
+                        //Get child room node
+                    RoomNodeSO childRoomNode = roomNodeGraph.GetRoomNode(childRoomNodeIDList[i]);
+
+                    // if the child room node is selected
+                    if (childRoomNode != null)
+                    {
+
+                        //Remove child ID from Parent Room node
+                        RemoveChildRoomNodeIDFromRoomNode(childRoomNode.id);
+
+                        //Remove parent id from child room node
+                        childRoomNode.RemoveParentRoomNodeIDFromRoomNode(id);
+                    }
+                    }
+                    
+                }
+            }
         }
 
        
