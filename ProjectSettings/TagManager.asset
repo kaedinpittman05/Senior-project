@@ -6,16 +6,22 @@ TagManager:
   tags:
   - SpawnPoint
   - Rooms
+  - groundTileMap
+  - decoration1Tilemap
+  - decoration2Tilemap
+  - frontTilemap
+  - collisionTilemap
+  - MinimapTileMap
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - door
+  - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - room
+  - wall
+  - Minimap
   - 
   - 
   - 
@@ -43,6 +49,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: door
+  - name: Ground Decoration 1
+    uniqueID: 1490375931
+    locked: 0
+  - name: Ground Decoration 2
+    uniqueID: 1636464585
+    locked: 0
+  - name: Instances
+    uniqueID: 3360528875
+    locked: 0
+  - name: Front
+    uniqueID: 2265995887
+    locked: 0
+  - name: Collision
+    uniqueID: 1488299339
+    locked: 0
+  - name: Minimap
     uniqueID: 3606454733
     locked: 0
