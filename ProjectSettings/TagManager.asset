@@ -10,24 +10,24 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - door
+  - 
   - Water
   - UI
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - IgnoreAmmo
+  - Camera 1
+  - Camera 2
+  - Player
+  - MiniMap
+  - Room
+  - Wall
+  - PlayerAmmo
+  - Enemy
+  - EnemyAmmo
+  - Environment
+  - PlayerWeapon
+  - EnemyWeapon
+  - Camera 3
   - 
   - 
   - 
@@ -43,6 +43,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: door
+  - name: Ground
     uniqueID: 3606454733
+    locked: 0
+  - name: GroundDecoration 1
+    uniqueID: 1514771391
+    locked: 0
+  - name: GroundDecoration 2
+    uniqueID: 1276902579
+    locked: 0
+  - name: Instances
+    uniqueID: 347387187
+    locked: 0
+  - name: front
+    uniqueID: 1945823727
+    locked: 0
+  - name: Collision
+    uniqueID: 2121956989
+    locked: 0
+  - name: Minimap
+    uniqueID: 1613581005
     locked: 0
