@@ -51,21 +51,21 @@ public class SettingsMenu : MonoBehaviour
 
    public void SetMusicVolume (float volume)
     {
-        audioMixer.SetFloat("musicVolume",volume);
-    
-                
-          
-   }
+        
+        audioMixer.SetFloat("musicVolume", Mathf.Log10(volume) * 20);
+
+
+
+    }
 
 
    public void SetSoundVolume(float volume)
    {
-        audioMixer.SetFloat("soundsVolume", volume);
+        audioMixer.SetFloat("soundsVolume", Mathf.Log10(volume) * 20);
 
 
 
-
-   }
+    }
 
     public void SetQuality (int qualityIndex)
     {
