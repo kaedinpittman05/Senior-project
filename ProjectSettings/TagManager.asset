@@ -6,6 +6,12 @@ TagManager:
   tags:
   - SpawnPoint
   - Rooms
+  - groundTileMap
+  - decoration1Tilemap
+  - decoration2Tilemap
+  - frontTilemap
+  - collisionTilemap
+  - MinimapTileMap
   layers:
   - Default
   - TransparentFX
@@ -18,9 +24,9 @@ TagManager:
   - Camera 1
   - Camera 2
   - Player
-  - MiniMap
-  - Room
-  - Wall
+  - Minimap
+  - room
+  - wall
   - PlayerAmmo
   - Enemy
   - EnemyAmmo
@@ -44,6 +50,24 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Ground
+    uniqueID: 2643631481
+    locked: 0
+  - name: Ground Decoration 1
+    uniqueID: 1490375931
+    locked: 0
+  - name: Ground Decoration 2
+    uniqueID: 1636464585
+    locked: 0
+  - name: Instances
+    uniqueID: 3360528875
+    locked: 0
+  - name: Front
+    uniqueID: 2265995887
+    locked: 0
+  - name: Collision
+    uniqueID: 1488299339
+    locked: 0
+  - name: Minimap
     uniqueID: 3606454733
     locked: 0
   - name: GroundDecoration 1
