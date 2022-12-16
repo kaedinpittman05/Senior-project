@@ -25,6 +25,25 @@ public class SettingsMenu : MonoBehaviour
     {
         connection = new SqliteConnection(string.Format("URI=file:Assets/Streaming Assets/{0}.db", dbName));
 
+        connection.Open();
+
+        IDataReader dataReader = ReadSavedData();
+
+        while (dataReader.Read())
+        {
+
+            // playerTransform.position = new Vector3(dataReader.GetFloat(1), dataReader.GetFloat(2), dataReader.GetFloat(3));
+            musicSlider.value = dataReader.GetFloat(1);
+            soundSlider.value = dataReader.GetFloat(2);
+            audioMixer.SetFloat("musicVolume", Mathf.Log10(dataReader.GetFloat(1)) * 20);
+            audioMixer.SetFloat("soundsVolume", Mathf.Log10(dataReader.GetFloat(2)) * 20);
+
+
+        }
+        connection.Close();
+
+
+
 
         resolutions = Screen.resolutions;
         
@@ -104,23 +123,38 @@ public class SettingsMenu : MonoBehaviour
         // Execute command reader - execute command
         command.ExecuteReader();
     }
+    
+    
+    IDataReader ReadSavedData()
+    {
+        // Create command (query)
+        IDbCommand command = connection.CreateCommand();
+        // Get all data in Slot = 1 from coordinates table
+        command.CommandText = "SELECT * FROM Settings WHERE current = 1;";
+        // Execute command
+        IDataReader dataReader = command.ExecuteReader();
+        return dataReader;
+    }
 
 
 
     public void MusicSave()
     {
-        //connection.Open();
-        //PushCommand(string.Format("UPDATE Settings SET music = {0} WHERE Current = 1;", volume), connection);
-        
-        
-        
-
-
         float music = musicSlider.value;
         float sound = soundSlider.value;
+        
+        connection.Open();
+     
+        PushCommand(string.Format("UPDATE Settings SET music = {0}, sound = {1}  WHERE Current = 1;", music, sound), connection);
+        
+        
+        
+
+
+        
         UnityEngine.Debug.Log(music);
         UnityEngine.Debug.Log(sound);
-        //connection.Close();
+        connection.Close();
 
 
     }
