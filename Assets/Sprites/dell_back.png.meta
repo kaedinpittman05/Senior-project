@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 47fcaed2e35e4ed4d8b7a2b7614f5837
+guid: b64b58a9e46f3f04da229d81598641c2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,148 +105,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: esta_0
+      name: dell_back_0
       rect:
         serializedVersion: 2
-        x: 65
-        y: 731
-        width: 614
-        height: 293
+        x: 7
+        y: 46
+        width: 557
+        height: 478
       alignment: 9
-      pivot: {x: 0.47, y: 0.06}
+      pivot: {x: 0.65, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f20bf4352d7ee4d4e973acce4f60f9d7
-      internalID: -567203725
+      spriteID: a4320dd85fbfb1b40ac49950795ebb82
+      internalID: -1282107656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: esta_1
+      name: dell_back_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 593
-        width: 88
-        height: 100
-      alignment: 9
-      pivot: {x: 0.9244059, y: 0.90595335}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41793e318a98b7d418e1072e039ab747
-      internalID: -1073600343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: esta_2
-      rect:
-        serializedVersion: 2
-        x: 172
-        y: 609
-        width: 100
-        height: 70
-      alignment: 9
-      pivot: {x: 0.07780838, y: 0.8943551}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bfccb8b2f453bd4c8099669fff502ef
-      internalID: 655259131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: esta_3
-      rect:
-        serializedVersion: 2
-        x: 450
-        y: 474
-        width: 274
-        height: 200
+        x: 601
+        y: 54
+        width: 500
+        height: 392
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0540a98dcad3f524cb07a1a21b46b3f8
-      internalID: 1852093121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: esta_4
-      rect:
-        serializedVersion: 2
-        x: 87
-        y: 407
-        width: 54
-        height: 157
-      alignment: 9
-      pivot: {x: 0.49999958, y: 0.95508164}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 753cb5656e24a494ba33561f92c7f286
-      internalID: -1090371149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: esta_5
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 402
-        width: 54
-        height: 156
-      alignment: 9
-      pivot: {x: 0.40978834, y: 0.9579988}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78f8b23c44a69664e83ec60a2a153b38
-      internalID: -1493846565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: esta_6
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 74
-        width: 614
-        height: 292
-      alignment: 9
-      pivot: {x: 0.47, y: 0.06}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5182b480b5bf10428f4ca1ef85ceaed
-      internalID: -1157585577
+      spriteID: c2e97eecedcf18b45a8bf9e7099e43d6
+      internalID: 1663091779
       vertices: []
       indices: 
       edges: []
@@ -262,13 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      esta_0: -567203725
-      esta_5: -1493846565
-      esta_2: 655259131
-      esta_4: -1090371149
-      esta_6: -1157585577
-      esta_1: -1073600343
-      esta_3: 1852093121
+      dell_back_1: 1663091779
+      dell_back_0: -1282107656
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -109,11 +109,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 21
-        y: 357
+        y: 811
         width: 526
         height: 369
       alignment: 9
-      pivot: {x: 0.504376, y: 0.1163656}
+      pivot: {x: 0.5, y: 0.11}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,11 +130,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 617
-        y: 429
+        y: 883
         width: 67
         height: 156
       alignment: 9
-      pivot: {x: 0.12209126, y: 0.9426547}
+      pivot: {x: 0.14911708, y: 0.91244274}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,7 +151,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 46
-        y: 10
+        y: 464
         width: 247
         height: 300
       alignment: 0
@@ -172,11 +172,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 329
-        y: 37
+        y: 492
         width: 80
         height: 203
       alignment: 9
-      pivot: {x: 0.3992958, y: 0.9648965}
+      pivot: {x: 0.28346786, y: 0.9266646}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -193,12 +193,12 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 435
-        y: 33
-        width: 64
-        height: 201
+        y: 487
+        width: 76
+        height: 246
       alignment: 9
-      pivot: {x: 0.49999952, y: 0.95234466}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.51628035, y: 0.76154906}
+      border: {x: 0, y: 0, z: 0, w: 42}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -213,12 +213,12 @@ TextureImporter:
       name: mycull_5
       rect:
         serializedVersion: 2
-        x: 523
-        y: 186
-        width: 246
-        height: 159
+        x: 564
+        y: 659
+        width: 134
+        height: 141
       alignment: 9
-      pivot: {x: 0.9491329, y: 0.95601785}
+      pivot: {x: 0.93398774, y: 0.9212179}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -226,6 +226,48 @@ TextureImporter:
       bones: []
       spriteID: 0ec513af64ef824458a347ac933ef632
       internalID: 707241430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mycull_6
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 57
+        width: 526
+        height: 381
+      alignment: 9
+      pivot: {x: 0.5169863, y: 0.15116824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de184352c7fce70409536b546077cf04
+      internalID: 1625908843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mycull_7
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 68
+        width: 247
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d29a44ffd93eb64987c1b484229379d
+      internalID: -519761897
       vertices: []
       indices: 
       edges: []
@@ -241,7 +283,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      mycull_7: -519761897
       mycull_1: 195632576
+      mycull_6: 1625908843
       mycull_4: 1447666021
       mycull_5: 707241430
       mycull_2: -1555062206

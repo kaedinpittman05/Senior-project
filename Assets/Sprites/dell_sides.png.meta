@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 47fcaed2e35e4ed4d8b7a2b7614f5837
+guid: a14a2cda4064807499d64750c0da5cea
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,148 +105,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: esta_0
+      name: dell_sides_0
       rect:
         serializedVersion: 2
-        x: 65
-        y: 731
-        width: 614
-        height: 293
+        x: 79
+        y: 485
+        width: 536
+        height: 439
       alignment: 9
-      pivot: {x: 0.47, y: 0.06}
+      pivot: {x: 0.4, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f20bf4352d7ee4d4e973acce4f60f9d7
-      internalID: -567203725
+      spriteID: 21a9a7a12890d424ba7d9bfc304cd576
+      internalID: 1096031748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: esta_1
+      name: dell_sides_1
       rect:
         serializedVersion: 2
-        x: 31
-        y: 593
-        width: 88
-        height: 100
-      alignment: 9
-      pivot: {x: 0.9244059, y: 0.90595335}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41793e318a98b7d418e1072e039ab747
-      internalID: -1073600343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: esta_2
-      rect:
-        serializedVersion: 2
-        x: 172
-        y: 609
-        width: 100
-        height: 70
-      alignment: 9
-      pivot: {x: 0.07780838, y: 0.8943551}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bfccb8b2f453bd4c8099669fff502ef
-      internalID: 655259131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: esta_3
-      rect:
-        serializedVersion: 2
-        x: 450
-        y: 474
-        width: 274
-        height: 200
+        x: 714
+        y: 490
+        width: 340
+        height: 387
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0540a98dcad3f524cb07a1a21b46b3f8
-      internalID: 1852093121
+      spriteID: 7ea254df9f2b97c4d984f97c38d76d60
+      internalID: -2114342504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: esta_4
+      name: dell_sides_2
       rect:
         serializedVersion: 2
-        x: 87
-        y: 407
-        width: 54
-        height: 157
+        x: 49
+        y: 22
+        width: 537
+        height: 439
       alignment: 9
-      pivot: {x: 0.49999958, y: 0.95508164}
+      pivot: {x: 0.6, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 753cb5656e24a494ba33561f92c7f286
-      internalID: -1090371149
+      spriteID: dec7ae48d99e25646b74a0ff91adb4f4
+      internalID: 1218383891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: esta_5
+      name: dell_sides_3
       rect:
         serializedVersion: 2
-        x: 302
-        y: 402
-        width: 54
-        height: 156
-      alignment: 9
-      pivot: {x: 0.40978834, y: 0.9579988}
+        x: 715
+        y: 28
+        width: 340
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78f8b23c44a69664e83ec60a2a153b38
-      internalID: -1493846565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: esta_6
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 74
-        width: 614
-        height: 292
-      alignment: 9
-      pivot: {x: 0.47, y: 0.06}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5182b480b5bf10428f4ca1ef85ceaed
-      internalID: -1157585577
+      spriteID: aeb09a2d54ceffc4aa4b8ea9aed68dac
+      internalID: -793569929
       vertices: []
       indices: 
       edges: []
@@ -262,13 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      esta_0: -567203725
-      esta_5: -1493846565
-      esta_2: 655259131
-      esta_4: -1090371149
-      esta_6: -1157585577
-      esta_1: -1073600343
-      esta_3: 1852093121
+      dell_sides_1: -2114342504
+      dell_sides_3: -793569929
+      dell_sides_0: 1096031748
+      dell_sides_2: 1218383891
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
