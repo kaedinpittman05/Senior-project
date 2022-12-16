@@ -3,17 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using Mono.Data.Sqlite;
+using System.Data;
+using System.Diagnostics;
+
 
 public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
 
     public Dropdown resolutionDropdown;
+    public Slider musicSlider;
+    public Slider soundSlider;
+    private string dbName = "game_database";
+    IDbConnection connection;
+
 
     Resolution[] resolutions;
 
     void Start ()
     {
+        connection = new SqliteConnection(string.Format("URI=file:Assets/Streaming Assets/{0}.db", dbName));
+
+
         resolutions = Screen.resolutions;
         
         resolutionDropdown.ClearOptions();
@@ -38,9 +50,10 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
 
 
-
-
     }
+
+
+  
 
     public void setResolution   (int resolutionIndex)
     {
@@ -51,21 +64,23 @@ public class SettingsMenu : MonoBehaviour
 
    public void SetMusicVolume (float volume)
     {
-        audioMixer.SetFloat("musicVolume",volume);
+        
+        audioMixer.SetFloat("musicVolume", Mathf.Log10(volume) * 20);
+
     
-                
-          
-   }
+
+
+
+    }
 
 
    public void SetSoundVolume(float volume)
    {
-        audioMixer.SetFloat("soundsVolume", volume);
+        audioMixer.SetFloat("soundsVolume", Mathf.Log10(volume) * 20);
 
 
 
-
-   }
+    }
 
     public void SetQuality (int qualityIndex)
     {
@@ -78,6 +93,36 @@ public class SettingsMenu : MonoBehaviour
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+    void PushCommand(string commandString, IDbConnection connection)
+    {
+        // Create new command
+        IDbCommand command = connection.CreateCommand();
+        // Add your comment text (queries)
+        command.CommandText = string.Format("{0}", commandString);
+        // Execute command reader - execute command
+        command.ExecuteReader();
+    }
+
+
+
+    public void MusicSave()
+    {
+        //connection.Open();
+        //PushCommand(string.Format("UPDATE Settings SET music = {0} WHERE Current = 1;", volume), connection);
+        
+        
+        
+
+
+        float music = musicSlider.value;
+        float sound = soundSlider.value;
+        UnityEngine.Debug.Log(music);
+        UnityEngine.Debug.Log(sound);
+        //connection.Close();
+
+
     }
 
 }
