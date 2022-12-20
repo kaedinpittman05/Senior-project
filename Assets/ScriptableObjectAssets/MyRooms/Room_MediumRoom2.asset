@@ -51,4 +51,8 @@ MonoBehaviour:
     doorwayCopyTileHeight: 7
     isConnected: 0
     isUnavailable: 0
-  spawnPositionArray: []
+  spawnPositionArray:
+  - {x: -15, y: 72}
+  - {x: 31, y: 74}
+  - {x: -6, y: 25}
+  - {x: 35, y: 38}
