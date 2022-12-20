@@ -12,7 +12,8 @@ public class FollowEnemy : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, target.position) > minDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime); 
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
     }
+
 }
