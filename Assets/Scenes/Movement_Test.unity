@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 457950045}
   - component: {fileID: 457950044}
   - component: {fileID: 457950043}
+  - component: {fileID: 457950048}
   m_Layer: 10
   m_Name: PlayerPlaceholder
   m_TagString: Player
@@ -276,16 +277,16 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 0.8493001
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!114 &457950045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +370,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &457950048
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457950042}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.004, y: 0.372}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.14, y: 0.745}
+  m_EdgeRadius: 0
 --- !u!1 &1028109486
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,6 +741,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5431197954764041690, guid: 43e196a2be37f694dbdbfd34288a7b30, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5431197954764041691, guid: 43e196a2be37f694dbdbfd34288a7b30, type: 3}
       propertyPath: m_Name
       value: MediumRoom3
@@ -859,12 +890,24 @@ PrefabInstance:
       value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 5431197956239729032, guid: 43e196a2be37f694dbdbfd34288a7b30, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431197956239729032, guid: 43e196a2be37f694dbdbfd34288a7b30, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431197956239729034, guid: 43e196a2be37f694dbdbfd34288a7b30, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5431197956239729034, guid: 43e196a2be37f694dbdbfd34288a7b30, type: 3}
       propertyPath: m_ColliderPaths.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431197956239729039, guid: 43e196a2be37f694dbdbfd34288a7b30, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5431197956303149024, guid: 43e196a2be37f694dbdbfd34288a7b30, type: 3}
       propertyPath: m_IsActive
