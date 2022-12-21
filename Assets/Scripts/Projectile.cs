@@ -35,7 +35,7 @@ public class Projectile : MonoBehaviour
 
     void Move()
     {
-        targetPosition = FindObjectOfType<PlayerMovement>().transform.position;
+        targetPosition = FindObjectOfType<multiplayermove>().transform.position;
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
 

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d93ec44aa551c845917576f35ff24bd, type: 3}
+  m_Name: DungeonLevel_1
+  m_EditorClassIdentifier: 
+  levelName: Forest
+  roomTemplateList:
+  - {fileID: 11400000, guid: 24f87f7bedc91a94c805b61939765fc2, type: 2}
+  - {fileID: 11400000, guid: 704c3bc2e0b5fc44d9b2a3ce5073322e, type: 2}
+  - {fileID: 11400000, guid: a55d062092ce53d4e82568ba24126732, type: 2}
+  - {fileID: 11400000, guid: d423d62135ef21843a8a12e121f6e40c, type: 2}
+  - {fileID: 11400000, guid: 31e6b9b2a73c98e4882aab654b594bed, type: 2}
+  - {fileID: 11400000, guid: 3155016ddfed954458aea324ca5b1dd8, type: 2}
+  - {fileID: 11400000, guid: 015951f37f35d3e4d8421cde3ea402e0, type: 2}
+  - {fileID: 11400000, guid: f1562128623973241acb9323cd2b568e, type: 2}
+  - {fileID: 11400000, guid: 74761477877bc6f438c059e3e4752d04, type: 2}
+  - {fileID: 11400000, guid: 3c733cafe1439b64ba4a81e14d56e357, type: 2}
+  roomNodeGraphList:
+  - {fileID: 11400000, guid: f6a3ebbf57bf3704abcef34be33fc360, type: 2}
+  - {fileID: 11400000, guid: 48a2d16667ba7174cab1c13fa6f58b76, type: 2}
+  - {fileID: 11400000, guid: 6e2f0ac274fa90e488adb7a02aca6789, type: 2}
+  - {fileID: 11400000, guid: 1df12f8aa141a2445885bd533d5010fd, type: 2}
