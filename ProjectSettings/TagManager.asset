@@ -12,6 +12,7 @@ TagManager:
   - frontTilemap
   - collisionTilemap
   - MinimapTileMap
+  - Enemy
   layers:
   - Default
   - TransparentFX

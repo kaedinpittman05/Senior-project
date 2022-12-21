@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22731de4fbc5ea4eb31fd14a3ccd283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
 --- !u!1 &5956940105683321423
 GameObject:
   m_ObjectHideFlags: 0
@@ -115,9 +115,9 @@ GameObject:
   - component: {fileID: 5980383826394242953}
   - component: {fileID: -8378395642162580378}
   - component: {fileID: 7029748310039256237}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ProjectilePlaceholder
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,7 +183,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.01, y: 1.01}
   m_EdgeRadius: 0
 --- !u!95 &7029748310039256237
 Animator:
