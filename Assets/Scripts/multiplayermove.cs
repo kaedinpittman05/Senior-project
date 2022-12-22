@@ -33,10 +33,14 @@ public class multiplayermove : MonoBehaviour
     {
 
         Vector2 move = new Vector2(movementinput.x, movementinput.y);
-        animator.SetFloat("Horizontal", movementinput.x);
-        animator.SetFloat("Vertical", movementinput.y);
-        animator.SetFloat("Speed", move.sqrMagnitude);
 
+
+        if (PauseMenu.GameIsPaused == false)
+        {
+            animator.SetFloat("Horizontal", movementinput.x);
+            animator.SetFloat("Vertical", movementinput.y);
+            animator.SetFloat("Speed", move.sqrMagnitude);
+        }
         
 
 
