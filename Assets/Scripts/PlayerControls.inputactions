@@ -73,8 +73,8 @@
                 },
                 {
                     "name": "",
-                    "id": "587c407e-6565-49a0-b2a0-8422b12bf103",
-                    "path": "<Gamepad>/leftStick",
+                    "id": "7404a54c-eba6-4189-a4e7-25cb3ae8bc35",
+                    "path": "<Gamepad>/dpad",
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
