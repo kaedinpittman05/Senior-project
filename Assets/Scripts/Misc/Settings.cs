@@ -4,6 +4,12 @@ using UnityEngine;
 
 public static class Setting
 {
+    #region DUNGEON BUILD SETTINGS
+    public const int maxDungeonRebuildAttemptsForRoomGraph = 1000;
+    public const int maxDungeonBuildAttempts = 10;
+    #endregion
+
+
     #region ROOM SETTINGS
 
     public const int maxChildCorridors = 3; // Maz number of child coridors leading from a room. - mazimum should be 3 although this is not reccomended 
