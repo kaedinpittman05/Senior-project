@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [DisallowMultipleComponent]
 public class GameManager : SingletonMonoBehaviour<GameManager>
@@ -71,7 +74,13 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     private void PlayDungeonLevel(int dungeonLevelListIndex)
     {
+        //Build dungeon for level
+        bool dungeonBuildSucessfully = DungeonBulider.Instance.GenerateDungeon(dungeonLevelList[dungeonLevelListIndex]);
 
+        if (!dungeonBuildSucessfully)
+        {
+            Debug.LogError("Couldn't build dungeno from specified rooms and node graphs");
+        }
     }
 
     #region Validation
