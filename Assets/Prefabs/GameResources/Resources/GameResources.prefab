@@ -45,3 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomNodeTypeList: {fileID: 11400000, guid: a43d2e348720ee34395f5d3eacb2df4b, type: 2}
+  playerDetailsList: []
+  currentPlayer: {fileID: 11400000, guid: 5e46e5fc610e7f245a8a6bce2d7d7aca, type: 2}
+  dimmedMaterial: {fileID: 0}

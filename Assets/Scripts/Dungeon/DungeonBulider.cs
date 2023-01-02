@@ -476,6 +476,8 @@ public class DungeonBulider : SingletonMonoBehaviour<DungeonBulider>
         {
             room.parentRoomID = "";
             room.isPreviouslyVisited = true;
+
+            GameManager.Instance.SetCurrentRoom(room);
         }
         else
         {
