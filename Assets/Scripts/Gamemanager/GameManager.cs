@@ -61,25 +61,26 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         // Handle game state
         switch (gameState)
         {
+
             case GameState.gameStarted:
 
-                //Play first level
+                // Play first level
                 PlayDungeonLevel(currentDungeonLevelListIndex);
 
                 gameState = GameState.playingLevel;
-
                 break;
+
         }
     }
 
     private void PlayDungeonLevel(int dungeonLevelListIndex)
     {
         //Build dungeon for level
-        bool dungeonBuildSucessfully = DungeonBulider.Instance.GenerateDungeon(dungeonLevelList[dungeonLevelListIndex]);
+        bool dungeonBuiltSucessfully = DungeonBulider.Instance.GenerateDungeon(dungeonLevelList[dungeonLevelListIndex]);
 
-        if (!dungeonBuildSucessfully)
+        if (!dungeonBuiltSucessfully)
         {
-            Debug.LogError("Couldn't build dungeno from specified rooms and node graphs");
+            Debug.Log("Couldn't build dungeno from specified rooms and node graphs");
         }
     }
 

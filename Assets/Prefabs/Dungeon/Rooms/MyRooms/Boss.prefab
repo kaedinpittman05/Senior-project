@@ -244,6 +244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5431197954764041693}
   - component: {fileID: 5431197954764041690}
+  - component: {fileID: 2470543369921262648}
   m_Layer: 3
   m_Name: Boss
   m_TagString: Untagged
@@ -294,6 +295,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2470543369921262648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431197954764041691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412cd5b454af0f44fa466ad1aff3e916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 0}
+  groundTilemap: {fileID: 0}
+  decoration1Tilemap: {fileID: 0}
+  decoration2Tilemap: {fileID: 0}
+  frontTilemap: {fileID: 0}
+  collisionTilemap: {fileID: 0}
+  minimapTilemap: {fileID: 0}
+  roomColliderBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &5431197955347807598
 GameObject:
   m_ObjectHideFlags: 0
@@ -100098,16 +100121,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 0, y: 0, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 75
-      m_TileSpriteIndex: 75
-      m_TileMatrixIndex: 3
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 1, y: 0, z: 0}
     second:
       serializedVersion: 2
@@ -109730,7 +109743,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 52de9129462e98444b34aae3687385c9, type: 2}
   - m_RefCount: 1212
     m_Data: {fileID: 11400000, guid: c09d52e13dadd654a82938945cf7ea14, type: 2}
-  - m_RefCount: 1244
+  - m_RefCount: 1243
     m_Data: {fileID: 11400000, guid: c3ffba1e086a827498739eb8b24b1ec6, type: 2}
   - m_RefCount: 1211
     m_Data: {fileID: 11400000, guid: 92dfa8d14d913c74e9f31fac9999a57b, type: 2}
@@ -109899,7 +109912,7 @@ Tilemap:
     m_Data: {fileID: -7159319893595962161, guid: a70efda2f0dc48c42b991dcdbdde8c18, type: 3}
   - m_RefCount: 1212
     m_Data: {fileID: 5764693036583914848, guid: a70efda2f0dc48c42b991dcdbdde8c18, type: 3}
-  - m_RefCount: 1244
+  - m_RefCount: 1243
     m_Data: {fileID: -2514540724640314922, guid: a70efda2f0dc48c42b991dcdbdde8c18, type: 3}
   - m_RefCount: 1211
     m_Data: {fileID: -4032512557146691541, guid: a70efda2f0dc48c42b991dcdbdde8c18, type: 3}
@@ -109972,7 +109985,7 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
-  - m_RefCount: 4953
+  - m_RefCount: 4952
     m_Data:
       e00: 1
       e01: 0
@@ -109991,7 +110004,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 5329
+  - m_RefCount: 5328
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
