@@ -12,6 +12,8 @@ public class scoreLoader : MonoBehaviour
     IDbConnection connection;
 
     public Text scores;
+    public Text character;
+    private string current = "";
 
 
 
@@ -26,7 +28,7 @@ public class scoreLoader : MonoBehaviour
         while (dataReader.Read())
         {
 
-            scores.text += dataReader["Run"] + "\t\t" + dataReader["Score"] + "\t\t" + dataReader["Time"] + "\n";
+            scores.text += dataReader["Run"] + "\t\t\t" + dataReader["Time"] + "\t\t" + dataReader["CharacterName"] + "\n";
 
 
         }
@@ -35,11 +37,33 @@ public class scoreLoader : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   public void dellSelect()
     {
-        
-        
+        current = "Dell";
+        character.text = "Current Character: " + current;
     }
+
+   public void estaSelect()
+    {
+        current = "Esta";
+        character.text = "Current Character: " + current;
+    }
+
+   public void tiffanySelect()
+    {
+        current = "Tiffany";
+        character.text = "Current Character: " + current;
+    }
+
+   public void mycullSelect ()
+    {
+        current = "Mycull";
+        character.text = "Current Character: " + current;
+    }
+
+
+
+
 
     void PushCommand(string commandString, IDbConnection connection)
     {
@@ -58,7 +82,7 @@ public class scoreLoader : MonoBehaviour
         // Create command (query)
         IDbCommand command = connection.CreateCommand();
         // Get all data in Slot = 1 from coordinates table
-        command.CommandText = "SELECT * FROM Scores ORDER BY Time LIMIT 10;";
+        command.CommandText = "SELECT * FROM Scores ORDER BY Time LIMIT 7;";
         // Execute command
         IDataReader dataReader = command.ExecuteReader();
         return dataReader;
