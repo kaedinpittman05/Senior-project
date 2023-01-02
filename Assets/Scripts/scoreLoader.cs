@@ -4,13 +4,14 @@ using System.Data;
 using Mono.Data.Sqlite;
 using System.Collections;
 using System.Diagnostics;
-
-public class DatabaseManager : MonoBehaviour
+using UnityEngine.UI;
+public class scoreLoader : MonoBehaviour
 {
-    [SerializeField]
-    private Transform playerTransform;
+   
     private string dbName = "game_database";
     IDbConnection connection;
+
+    public Text scores;
 
 
 
@@ -18,39 +19,26 @@ public class DatabaseManager : MonoBehaviour
     void Start()
     {
         connection = new SqliteConnection(string.Format("URI=file:Assets/Streaming Assets/{0}.db", dbName));
+        connection.Open();
+        
+        IDataReader dataReader = ReadSavedData();
+
+        while (dataReader.Read())
+        {
+
+            scores.text += dataReader["Run"] + "\t\t" + dataReader["Score"] + "\t\t" + dataReader["Time"] + "\n";
+
+
+        }
+
+        connection.Close();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            connection.Open();
-
-            PushCommand(string.Format("UPDATE Coordinates SET XAxis = {0}, YAxis = {1} , ZAxis = {2} WHERE Slot = 1;", playerTransform.position.x, playerTransform.position.y, playerTransform.position.z), connection);
-            UnityEngine.Debug.Log("Saved");
-           
-
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            // Open database
-            connection.Open();
-
-            // Read X , Y , Z Axis
-            IDataReader dataReader = ReadSavedData();
-
-            // Separate Float Data and assign to player position
-            while (dataReader.Read())
-            {
-                // Assigning saved position
-                playerTransform.position = new Vector3(dataReader.GetFloat(1), dataReader.GetFloat(2), dataReader.GetFloat(3));
-            }
-
-        }
-        connection.Close();
-
+        
+        
     }
 
     void PushCommand(string commandString, IDbConnection connection)
@@ -65,10 +53,12 @@ public class DatabaseManager : MonoBehaviour
 
     IDataReader ReadSavedData()
     {
+        scores.text = "";
+        
         // Create command (query)
         IDbCommand command = connection.CreateCommand();
         // Get all data in Slot = 1 from coordinates table
-        command.CommandText = "SELECT * FROM Coordinates WHERE Slot = 1;";
+        command.CommandText = "SELECT * FROM Scores ORDER BY Time LIMIT 10;";
         // Execute command
         IDataReader dataReader = command.ExecuteReader();
         return dataReader;
