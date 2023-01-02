@@ -39,10 +39,10 @@ TextureImporter:
     wrapU: 0
     wrapV: 0
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +53,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -103,18 +103,150 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: tiffany_sides_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 970
+        width: 353
+        height: 355
+      alignment: 9
+      pivot: {x: 0.45, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628ff6c3eba93264e96cacee1b7cf381
+      internalID: -563179129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiffany_sides_1
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 970
+        width: 353
+        height: 355
+      alignment: 9
+      pivot: {x: 0.55, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed59e369737e2041b197a58105ed71f
+      internalID: -1972107547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiffany_sides_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 443
+        width: 303
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35cd220000ba6954291a0b232c1bbd5b
+      internalID: -331561785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiffany_sides_3
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 425
+        width: 303
+        height: 507
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95dfb934a3b04e4192e0b6d89686abe
+      internalID: -805767286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiffany_sides_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 10
+        width: 175
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b0a0b548b85a74997e53f5e2629921
+      internalID: -1974513090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiffany_sides_5
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 28
+        width: 175
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc4be035b84e8043904e60b3057a678
+      internalID: 1526739350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2d5a72d592724374c90e8eb945187f60
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tiffany_sides_4: -1974513090
+      tiffany_sides_0: -563179129
+      tiffany_sides_5: 1526739350
+      tiffany_sides_3: -805767286
+      tiffany_sides_2: -331561785
+      tiffany_sides_1: -1972107547
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
