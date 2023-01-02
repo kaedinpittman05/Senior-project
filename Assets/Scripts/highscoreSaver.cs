@@ -5,7 +5,7 @@ using Mono.Data.Sqlite;
 using System.Collections;
 using System.Diagnostics;
 
-public class DatabaseManager : MonoBehaviour
+public class highscoreSaver: MonoBehaviour
 {
     [SerializeField]
     private Transform playerTransform;
@@ -23,34 +23,7 @@ public class DatabaseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            connection.Open();
-
-            PushCommand(string.Format("UPDATE Coordinates SET XAxis = {0}, YAxis = {1} , ZAxis = {2} WHERE Slot = 1;", playerTransform.position.x, playerTransform.position.y, playerTransform.position.z), connection);
-            UnityEngine.Debug.Log("Saved");
-           
-
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            // Open database
-            connection.Open();
-
-            // Read X , Y , Z Axis
-            IDataReader dataReader = ReadSavedData();
-
-            // Separate Float Data and assign to player position
-            while (dataReader.Read())
-            {
-                // Assigning saved position
-                playerTransform.position = new Vector3(dataReader.GetFloat(1), dataReader.GetFloat(2), dataReader.GetFloat(3));
-            }
-
-        }
-        connection.Close();
-
+       
     }
 
     void PushCommand(string commandString, IDbConnection connection)

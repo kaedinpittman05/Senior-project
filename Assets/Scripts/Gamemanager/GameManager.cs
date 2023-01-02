@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [DisallowMultipleComponent]
 public class GameManager : SingletonMonoBehaviour<GameManager>
@@ -58,20 +61,27 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         // Handle game state
         switch (gameState)
         {
+
             case GameState.gameStarted:
 
-                //Play first level
+                // Play first level
                 PlayDungeonLevel(currentDungeonLevelListIndex);
 
                 gameState = GameState.playingLevel;
-
                 break;
+
         }
     }
 
     private void PlayDungeonLevel(int dungeonLevelListIndex)
     {
+        //Build dungeon for level
+        bool dungeonBuiltSucessfully = DungeonBulider.Instance.GenerateDungeon(dungeonLevelList[dungeonLevelListIndex]);
 
+        if (!dungeonBuiltSucessfully)
+        {
+            Debug.Log("Couldn't build dungeno from specified rooms and node graphs");
+        }
     }
 
     #region Validation
