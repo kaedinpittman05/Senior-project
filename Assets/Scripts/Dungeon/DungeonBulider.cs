@@ -20,8 +20,8 @@ public class DungeonBulider : SingletonMonoBehaviour<DungeonBulider>
         // load the room node type list
         LoadRoomNodeTypeList();
 
-        // set dimmed material to fully visible
-        GameResources.Instance.dimmedMaterial.SetFloat("Alpha_Slider", 1f);
+       
+
     }
 
     /// Load the room node type list
@@ -313,7 +313,7 @@ public class DungeonBulider : SingletonMonoBehaviour<DungeonBulider>
 
         Room overlappingRoom = CheckForRoomOverlap(room);
 
-        if (overlappingRoom = null)
+        if (overlappingRoom == null)
         {
             // mark doorways as connected & unavailable
             doorwayParent.isConnected = true;
@@ -518,7 +518,28 @@ public class DungeonBulider : SingletonMonoBehaviour<DungeonBulider>
     // Instantiate the dungeon room gameobjects from the prefabs
     private void InstantiateRoomGameObjects()
     {
+        // Iterate through all dungeon rooms.
+        foreach (KeyValuePair<string, Room> keyvaluepair in dungeonBuliderRoomDictionary)
+        {
+            Room room = keyvaluepair.Value;
 
+            // Calculate room position (remember the room instantiatation position needs to be adjusted by the room template lower bounds)
+            Vector3 roomPosition = new Vector3(room.lowerBounds.x - room.templateLowerBounds.x, room.lowerBounds.y - room.templateLowerBounds.y, 0f);
+
+            // Instantiate room
+            GameObject roomGameobject = Instantiate(room.prefab, roomPosition, Quaternion.identity, transform);
+
+            // Get instantiated room component from instantiated prefab.
+            InstantiatedRoom instantiatedRoom = roomGameobject.GetComponentInChildren<InstantiatedRoom>();
+
+            instantiatedRoom.room = room;
+
+            // Initialise The Instantiated Room
+            instantiatedRoom.Initialise(roomGameobject);
+
+            // Save gameobject reference.
+            room.instantiatedRoom = instantiatedRoom;
+        }
     }
 
     // get a room template by room templte ID, returns nul id ID doesnt exist
