@@ -197,7 +197,7 @@ public class DungeonBulider : SingletonMonoBehaviour<DungeonBulider>
         room.id = roomNode.id;
         room.prefab = roomTemplate.prefab;
         room.roomNodeType = roomTemplate.roomNodeType;
-        room.lowerBounds
+        room.lowerBounds;
     }
 
 
