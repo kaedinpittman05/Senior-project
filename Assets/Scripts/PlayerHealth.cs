@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float health = 100f;
+    public float health = 6f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +21,11 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            health = health - 20;
+            health = health - 1;
             Debug.Log(health);
             if (health == 0)
             {
-                health = 100;
+                health = 6;
             }
         }
     }
