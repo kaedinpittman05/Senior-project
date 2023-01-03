@@ -108,10 +108,10 @@ TextureImporter:
       name: goblin_0
       rect:
         serializedVersion: 2
-        x: 76
-        y: 1120
+        x: 87
+        y: 1118
         width: 518
-        height: 318
+        height: 363
       alignment: 9
       pivot: {x: 0.45, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,8 +129,8 @@ TextureImporter:
       name: goblin_1
       rect:
         serializedVersion: 2
-        x: 687
-        y: 1325
+        x: 697
+        y: 1323
         width: 33
         height: 104
       alignment: 2
@@ -150,8 +150,8 @@ TextureImporter:
       name: goblin_2
       rect:
         serializedVersion: 2
-        x: 763
-        y: 1165
+        x: 772
+        y: 1162
         width: 34
         height: 104
       alignment: 2
@@ -171,12 +171,12 @@ TextureImporter:
       name: goblin_3
       rect:
         serializedVersion: 2
-        x: 171
-        y: 884
-        width: 157
-        height: 199
+        x: 166
+        y: 856
+        width: 190
+        height: 224
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,8 +192,8 @@ TextureImporter:
       name: goblin_4
       rect:
         serializedVersion: 2
-        x: 608
-        y: 913
+        x: 618
+        y: 911
         width: 75
         height: 168
       alignment: 3
@@ -213,8 +213,8 @@ TextureImporter:
       name: goblin_5
       rect:
         serializedVersion: 2
-        x: 756
-        y: 923
+        x: 766
+        y: 921
         width: 75
         height: 168
       alignment: 1
@@ -234,10 +234,10 @@ TextureImporter:
       name: goblin_6
       rect:
         serializedVersion: 2
-        x: 65
-        y: 501
+        x: 72
+        y: 466
         width: 372
-        height: 321
+        height: 364
       alignment: 9
       pivot: {x: 0.55, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,12 +255,12 @@ TextureImporter:
       name: goblin_7
       rect:
         serializedVersion: 2
-        x: 557
-        y: 540
-        width: 147
-        height: 199
+        x: 550
+        y: 508
+        width: 176
+        height: 228
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -276,10 +276,10 @@ TextureImporter:
       name: goblin_8
       rect:
         serializedVersion: 2
-        x: 62
-        y: 84
+        x: 55
+        y: 82
         width: 518
-        height: 318
+        height: 363
       alignment: 9
       pivot: {x: 0.45, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,57 +294,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: goblin_9
-      rect:
-        serializedVersion: 2
-        x: 708
-        y: 392
-        width: 31
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20dde41761d699e4fb4b6399d6d90b01
-      internalID: 1107757098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: goblin_10
-      rect:
-        serializedVersion: 2
-        x: 754
-        y: 361
-        width: 59
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 885bc731a055b5146bc5743ea033860e
-      internalID: -1840107690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: goblin_11
       rect:
         serializedVersion: 2
-        x: 639
-        y: 130
-        width: 157
-        height: 199
+        x: 638
+        y: 102
+        width: 190
+        height: 224
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
