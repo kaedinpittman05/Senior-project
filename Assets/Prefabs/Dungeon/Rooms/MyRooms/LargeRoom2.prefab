@@ -405,7 +405,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 412cd5b454af0f44fa466ad1aff3e916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room: {fileID: 0}
   grid: {fileID: 0}
   groundTilemap: {fileID: 0}
   decoration1Tilemap: {fileID: 0}
@@ -33674,7 +33673,7 @@ GameObject:
   - component: {fileID: 5431197956239729036}
   - component: {fileID: 5431197956239729037}
   - component: {fileID: 5431197956239729034}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: Tilemap5_Collision
   m_TagString: collisionTilemap
   m_Icon: {fileID: 0}
