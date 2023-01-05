@@ -72,6 +72,11 @@ public class RoomTemplateSO : ScriptableObject
 
     public Vector2Int[] spawnPositionArray;
 
+   
+
+ 
+
+
     /// <summary>
     /// Returns the list of Entrances for the room template
     /// </summary>
