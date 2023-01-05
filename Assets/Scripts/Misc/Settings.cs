@@ -4,6 +4,11 @@ using UnityEngine;
 
 public static class Setting
 {
+    #region UNITS
+    public const float pixelsPerUnit = 16f;
+    public const float tileSizePixels = 16f;
+    #endregion
+
     #region DUNGEON BUILD SETTINGS
     public const int maxDungeonRebuildAttemptsForRoomGraph = 1000;
     public const int maxDungeonBuildAttempts = 10;
@@ -16,5 +21,15 @@ public static class Setting
     // it can cause the dungeon building to fail since the rooms are more likely to not fit togeather;
 
 
+    #endregion
+
+    #region ANIMATOR PARAMETERS
+ 
+    // Animator parameters - Door
+    public static int open = Animator.StringToHash("open");
+    #endregion
+
+    #region GAMEOBJECT TAGS
+    public const string playerTag = "Player";
     #endregion
 }
