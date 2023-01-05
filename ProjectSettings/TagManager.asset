@@ -89,3 +89,6 @@ TagManager:
   - name: Minimap
     uniqueID: 1613581005
     locked: 0
+  - name: Health
+    uniqueID: 2736827873
+    locked: 0

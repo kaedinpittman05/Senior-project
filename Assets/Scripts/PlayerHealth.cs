@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     public float health = 6f;
+    public GameObject heart1;
+    public GameObject heart2;
+    public GameObject heart3;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +27,9 @@ public class PlayerHealth : MonoBehaviour
         {
             health = health - 1;
             Debug.Log(health);
-            if (health == 0)
+            if (health <= 0)
             {
-                health = 6;
+                SceneManager.LoadScene("main_menu");
             }
         }
     }
