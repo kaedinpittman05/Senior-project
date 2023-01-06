@@ -11,7 +11,7 @@ public enum GameState
 {
     gameStarted,
     playingLevel,
-    engagingEnimies,
+    engagingEnemies,
     bossStage,
     engagingBoss,
     levelCompleted,

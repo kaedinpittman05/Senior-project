@@ -35,6 +35,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     private Player player;
 
     [HideInInspector] public GameState gameState;
+    [HideInInspector] public GameState previousGameState;
 
     protected override void Awake()
     {
@@ -65,9 +66,12 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     }
 
 
+
+
     // Start is called before the first frame update
     private void Start()
     {
+        previousGameState = GameState.gameStarted;
         gameState = GameState.gameStarted;
     }
 
@@ -78,10 +82,10 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
 
         // For testing
-        if (Input.GetKeyDown(KeyCode.R)) 
-        {
-            gameState = GameState.gameStarted;
-        }
+        ///if (Input.GetKeyDown(KeyCode.R)) 
+        ///{
+            //gameState = GameState.gameStarted;
+        //}
     }
 
     /// <summary>
@@ -100,6 +104,14 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
                 PlayDungeonLevel(currentDungeonLevelListIndex);
 
                 gameState = GameState.playingLevel;
+                break;
+
+
+            // While engaging enemies handle the escape key for the pause menu
+            case GameState.engagingEnemies:
+
+                
+
                 break;
 
         }
