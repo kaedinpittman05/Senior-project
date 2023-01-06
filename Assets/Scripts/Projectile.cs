@@ -43,8 +43,10 @@ public class Projectile : MonoBehaviour
     {
         if (transform.position == targetPosition)
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+            gameObject.SetActive(false);
             Debug.Log("Destroy");
+            
         }
         else if (Time.time >= destroyTime)
         {
