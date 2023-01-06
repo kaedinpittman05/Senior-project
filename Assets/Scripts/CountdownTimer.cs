@@ -20,7 +20,7 @@ public class CountdownTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentTime -= 2 * Time.deltaTime;
+        currentTime += 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
         
         if(currentTime <= 0)

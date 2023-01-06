@@ -28,37 +28,12 @@ public class scoreLoader : MonoBehaviour
         while (dataReader.Read())
         {
 
-            scores.text += dataReader["Run"] + "\t\t\t" + dataReader["Time"] + "\t\t" + dataReader["CharacterName"] + "\n";
+            scores.text += dataReader["Run"] + "\t\t\t" + dataReader["Time"] + "s\n";
 
 
         }
 
         connection.Close();
-    }
-
-    // Update is called once per frame
-   public void dellSelect()
-    {
-        current = "Dell";
-        character.text = "Current Character: " + current;
-    }
-
-   public void estaSelect()
-    {
-        current = "Esta";
-        character.text = "Current Character: " + current;
-    }
-
-   public void tiffanySelect()
-    {
-        current = "Tiffany";
-        character.text = "Current Character: " + current;
-    }
-
-   public void mycullSelect ()
-    {
-        current = "Mycull";
-        character.text = "Current Character: " + current;
     }
 
 
