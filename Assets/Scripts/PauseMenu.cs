@@ -21,7 +21,7 @@ public class PauseMenu : MonoBehaviour
 
 
 
-        if (GameIsPaused = false)
+        if (GameIsPaused == false)
         {
             currentTime += 1 * Time.deltaTime;
             countdownText.text = currentTime.ToString("0");
