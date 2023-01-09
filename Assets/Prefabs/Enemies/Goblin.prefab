@@ -13,18 +13,11 @@ GameObject:
   - component: {fileID: 4172863492457993204}
   - component: {fileID: 6599103532211140291}
   - component: {fileID: 7511224343162400894}
-<<<<<<< HEAD
-  - component: {fileID: 7326792142286192843}
-=======
   - component: {fileID: 7854060259299700379}
   - component: {fileID: 8314453542486877726}
   - component: {fileID: -8286124944061979972}
   - component: {fileID: 7480050625267369233}
-<<<<<<< HEAD
   - component: {fileID: 7029807524100981260}
->>>>>>> d29aaa95a48462779db593b34a25b2bd4a1843c2
-=======
->>>>>>> 2faf1586faf4e69391d0eee6431b5b9eb163b377
   m_Layer: 15
   m_Name: Goblin
   m_TagString: Enemy
@@ -41,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 5015013471649329551}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.59, y: -1.147, z: -0.0046867384}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5015013473091707394}
@@ -52,7 +45,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5015013471649329550
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -69,7 +62,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4172863492457993204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,9 +128,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.143207, y: 5.881918}
   m_EdgeRadius: 0
-<<<<<<< HEAD
---- !u!114 &7326792142286192843
-=======
 --- !u!210 &7854060259299700379
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -247,9 +237,7 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
-<<<<<<< HEAD
 --- !u!114 &7029807524100981260
->>>>>>> d29aaa95a48462779db593b34a25b2bd4a1843c2
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,20 +246,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5015013471649329551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
-  m_Script: {fileID: 11500000, guid: 4644f350e4c650c49848c3eabada056c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 5015013471649329550}
-=======
   m_Script: {fileID: 11500000, guid: 57bfb1c76b933524c89596f5d53648b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDetails: {fileID: 0}
   spriteRendererArray: []
->>>>>>> d29aaa95a48462779db593b34a25b2bd4a1843c2
-=======
->>>>>>> 2faf1586faf4e69391d0eee6431b5b9eb163b377
 --- !u!1 &5015013471864025146
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +422,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &5015013471889843770
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -460,7 +439,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5015013472166880520
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +782,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &5015013473091707453
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -820,4 +799,4 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
