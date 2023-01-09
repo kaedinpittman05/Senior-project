@@ -526,7 +526,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &653582371
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -543,7 +543,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &734783458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,8 +1065,10 @@ MonoBehaviour:
 
     Ethan Winger
 
-    Matt
-    Geiger'
+    Nic
+    Zagame
+
+    Matt Geiger'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 420d356300d5add4e8cc0e737a19a3fc, type: 2}
   m_sharedMaterial: {fileID: -2381450729332270796, guid: 420d356300d5add4e8cc0e737a19a3fc, type: 2}
@@ -1448,7 +1450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.865, y: -1142}
+  m_AnchoredPosition: {x: 27.865, y: -1163}
   m_SizeDelta: {x: 122.14, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355322833
@@ -1995,7 +1997,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1641029982
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2012,7 +2014,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &1641029983
 MonoBehaviour:
   m_ObjectHideFlags: 0
