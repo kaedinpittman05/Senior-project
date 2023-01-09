@@ -218,6 +218,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dell
       objectReference: {fileID: 0}
+    - target: {fileID: 2996818001650571934, guid: 0282a7d9719d09c41afa23e3bd8e4011, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2996818001650571934, guid: 0282a7d9719d09c41afa23e3bd8e4011, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1636464585
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268795021941854168, guid: 0282a7d9719d09c41afa23e3bd8e4011, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360900744955048190, guid: 0282a7d9719d09c41afa23e3bd8e4011, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0307504
+      objectReference: {fileID: 0}
+    - target: {fileID: 5168533132030202876, guid: 0282a7d9719d09c41afa23e3bd8e4011, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.2334833
+      objectReference: {fileID: 0}
+    - target: {fileID: 5168533132030202876, guid: 0282a7d9719d09c41afa23e3bd8e4011, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.02201036
+      objectReference: {fileID: 0}
     - target: {fileID: 7954916421885995644, guid: 0282a7d9719d09c41afa23e3bd8e4011, type: 3}
       propertyPath: m_RootOrder
       value: 1
