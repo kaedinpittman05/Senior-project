@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        //Checks if there is already an audio manager in the scene
         if(instance == null)
             instance = this;
         else
@@ -24,6 +25,7 @@ public class AudioManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
+        //Adds sounds to correct information
         foreach (Sound s in sounds )
         {
            s.source = gameObject.AddComponent<AudioSource>();
@@ -39,6 +41,7 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    //Plays sounds if not null
     public void Play (string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -48,7 +51,7 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
 
     }
-
+    //Stops the sounds from playing
     public void StopPlaying(string sound)
     {
         Sound s = Array.Find(sounds, item => item.name == sound);
@@ -61,7 +64,7 @@ public class AudioManager : MonoBehaviour
         
         s.source.Stop();
     }
-
+    //PLays title theme on start.
     void Start ()
     {
         Play("titletheme");

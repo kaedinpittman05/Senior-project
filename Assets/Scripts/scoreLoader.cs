@@ -20,6 +20,7 @@ public class scoreLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Opens sqlite connectiosn, reads run and time, puts them into scores
         connection = new SqliteConnection(string.Format("URI=file:Assets/Streaming Assets/{0}.db", dbName));
         connection.Open();
         

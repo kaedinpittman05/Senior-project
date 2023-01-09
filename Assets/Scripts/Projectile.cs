@@ -13,6 +13,7 @@ public class Projectile : MonoBehaviour
     private float destroyTime;
     private bool canSpeedUp = true;
     private bool justSpawned = true;
+    BoxCollider2D target;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class Projectile : MonoBehaviour
 
     void TryDestroy()
     {
-        if (transform.position == targetPosition)
+        if (this.GetComponent<CircleCollider2D>().IsTouching(target))
         {
             Destroy(this.gameObject);
             gameObject.SetActive(false);
@@ -69,6 +70,7 @@ public class Projectile : MonoBehaviour
         if (justSpawned)
         {
             speed = 3;
+            target = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D>();
             justSpawned = false;
         }
     }

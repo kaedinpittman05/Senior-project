@@ -23,6 +23,7 @@ public class SettingsMenu : MonoBehaviour
 
     void Start ()
     {
+        //Gets volumes from database, puts them into the audiomixer
         connection = new SqliteConnection(string.Format("URI=file:Assets/Streaming Assets/{0}.db", dbName));
 
         connection.Open();
@@ -44,7 +45,7 @@ public class SettingsMenu : MonoBehaviour
 
 
 
-
+        //Sets resolution dropdown.
         resolutions = Screen.resolutions;
         
         resolutionDropdown.ClearOptions();
@@ -73,14 +74,14 @@ public class SettingsMenu : MonoBehaviour
 
 
   
-
+    //Set current resolution 
     public void setResolution   (int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 
-
+    //set music volume
    public void SetMusicVolume (float volume)
     {
         
@@ -92,7 +93,7 @@ public class SettingsMenu : MonoBehaviour
 
     }
 
-
+    //Sets sound volume
    public void SetSoundVolume(float volume)
    {
         audioMixer.SetFloat("soundsVolume", Mathf.Log10(volume) * 20);
@@ -100,7 +101,7 @@ public class SettingsMenu : MonoBehaviour
 
 
     }
-
+    //Set graphics quality
     public void SetQuality (int qualityIndex)
     {
         
@@ -109,6 +110,7 @@ public class SettingsMenu : MonoBehaviour
 
     }
 
+    //Toggle Fullscreen
     public void SetFullscreen (bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
@@ -137,7 +139,7 @@ public class SettingsMenu : MonoBehaviour
     }
 
 
-
+    //Saves music and sound to database
     public void MusicSave()
     {
         float music = musicSlider.value;

@@ -20,7 +20,7 @@ public class multiplayermove : MonoBehaviour
 
 
   
-   
+   // Reads values on move
     public void OnMove(InputAction.CallbackContext context)
     {
         movementinput = context.ReadValue<Vector2>();
@@ -31,6 +31,7 @@ public class multiplayermove : MonoBehaviour
     
     void Update()
     {
+        //Moves character and animations
 
         Vector2 move = new Vector2(movementinput.x, movementinput.y);
 
@@ -46,6 +47,7 @@ public class multiplayermove : MonoBehaviour
 
     }
 
+    //Moves rigidbody at speed
     private void FixedUpdate()
     {
         Vector2 move = new Vector2(movementinput.x, movementinput.y);

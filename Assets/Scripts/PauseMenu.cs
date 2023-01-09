@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PauseMenu : MonoBehaviour
 {
@@ -8,10 +10,30 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     public GameObject pauseMenuUI;
+    public float currentTime = 0f;
+    [SerializeField] Text countdownText;
+    public float startingTime = 0f;
+  
 
     // Update is called once per frame
     void Update()
     {
+
+        //If games is paused increase time and add to text
+
+        if (GameIsPaused == false)
+        {
+            currentTime += 1 * Time.deltaTime;
+            countdownText.text = currentTime.ToString("0");
+
+            if (currentTime <= 0)
+            {
+                currentTime = 0;
+            }
+
+        }
+
+        //If escape is pressed do pause if not else resume
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
@@ -25,7 +47,12 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        currentTime = startingTime;
+    }
 
+    //Resumes game
     public void Resume ()
     {
         pauseMenuUI.SetActive(false);
@@ -33,6 +60,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
+    //Pauses game and brings up pause menu.
     void Pause ()
     {
         pauseMenuUI.SetActive(true);

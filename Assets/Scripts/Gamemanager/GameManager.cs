@@ -36,6 +36,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     [HideInInspector] public GameState gameState;
     [HideInInspector] public GameState previousGameState;
+    private InstantiatedRoom bossRoom;
 
     protected override void Awake()
     {
@@ -49,6 +50,34 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         InstantiatePlayer();
 
     }
+
+    private void OnEnable()
+    {
+        // Subscribe to room changed event.
+        StaticEventHandler.OnRoomChanged += StaticEventHandler_OnRoomChanged;
+
+    }
+
+
+    private void OnDisable()
+    {
+        // Unsubscribe from room changed event
+        StaticEventHandler.OnRoomChanged -= StaticEventHandler_OnRoomChanged;
+
+        
+
+    }
+
+    /// <summary>
+    /// Handle room changed event
+    /// </summary>
+    private void StaticEventHandler_OnRoomChanged(RoomChangedEventArgs roomChangedEventArgs)
+    {
+        SetCurrentRoom(roomChangedEventArgs.room);
+    }
+
+    
+
 
     /// <summary>
     /// Create player in scene at position
@@ -147,12 +176,56 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     }
 
-
-   
-
     /// <summary>
-    /// Get the current room the player is in
+    /// Room enemies defated - test if all dungeon rooms have been cleared of enemies - if so load
+    /// next dungeon game level
     /// </summary>
+    private void RoomEnemiesDefeated()
+    {
+        // Initialise dungeon as being cleared - but then test each room
+        bool isDungeonClearOfRegularEnemies = true;
+        bossRoom = null;
+
+        // Loop through all dungeon rooms to see if cleared of enemies
+        foreach (KeyValuePair<string, Room> keyValuePair in DungeonBulider.Instance.dungeonBuliderRoomDictionary)
+        {
+            // skip boss room for time being
+            if (keyValuePair.Value.roomNodeType.isBossRoom)
+            {
+                bossRoom = keyValuePair.Value.instantiatedRoom;
+                continue;
+            }
+
+            // check if other rooms have been cleared of enemies
+            if (!keyValuePair.Value.isClearedOfEnemies)
+            {
+                isDungeonClearOfRegularEnemies = false;
+                break;
+            }
+        }
+
+        // Set game state
+        // If dungeon level completly cleared (i.e. dungeon cleared apart from boss and there is no boss room OR dungeon cleared apart from boss and boss room is also cleared)
+        if ((isDungeonClearOfRegularEnemies && bossRoom == null) || (isDungeonClearOfRegularEnemies && bossRoom.room.isClearedOfEnemies))
+        {
+            // Are there more dungeon levels then
+            if (currentDungeonLevelListIndex < dungeonLevelList.Count - 1)
+            {
+                gameState = GameState.levelCompleted;
+            }
+            else
+            {
+                gameState = GameState.gameWon;
+            }
+        }
+    }
+
+
+
+
+        /// <summary>
+        /// Get the current room the player is in
+        /// </summary>
     public Room GetCurrentRoom()
     {
         return currentRoom;

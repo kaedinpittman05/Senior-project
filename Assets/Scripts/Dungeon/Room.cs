@@ -26,7 +26,7 @@ public class Room
 
     public Room()
     {
-        childRoomIDList= new List<string>();
+        childRoomIDList = new List<string>();
         doorWayList = new List<Doorway>();
     }
 
