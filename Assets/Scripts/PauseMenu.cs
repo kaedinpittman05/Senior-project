@@ -19,7 +19,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
 
-
+        //If games is paused increase time and add to text
 
         if (GameIsPaused == false)
         {
@@ -33,7 +33,7 @@ public class PauseMenu : MonoBehaviour
 
         }
 
-
+        //If escape is pressed do pause if not else resume
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
@@ -52,7 +52,7 @@ public class PauseMenu : MonoBehaviour
         currentTime = startingTime;
     }
 
-
+    //Resumes game
     public void Resume ()
     {
         pauseMenuUI.SetActive(false);
@@ -60,6 +60,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     }
 
+    //Pauses game and brings up pause menu.
     void Pause ()
     {
         pauseMenuUI.SetActive(true);
