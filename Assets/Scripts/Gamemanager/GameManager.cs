@@ -46,9 +46,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         // Set player details - saved in current player scriptable object from the main menu
         playerDetails = GameResources.Instance.currentPlayer.playerDetails;
 
-        // Instantiate player
-        InstantiatePlayer();
-
+       
     }
 
     private void OnEnable()
@@ -79,20 +77,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     
 
 
-    /// <summary>
-    /// Create player in scene at position
-    /// </summary>
-    private void InstantiatePlayer()
-    {
-        // Instantiate player
-        GameObject playerGameObject = Instantiate(playerDetails.playerPrefab);
-
-        // Initialize Player
-        player = playerGameObject.GetComponent<Player>();
-
-        player.Initialize(playerDetails);
-
-    }
 
 
 
@@ -168,11 +152,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             Debug.Log("Couldn't build dungeno from specified rooms and node graphs");
         }
 
-        // Set player roughly mid-room
-        player.gameObject.transform.position = new Vector3((currentRoom.lowerBounds.x + currentRoom.upperBounds.x) / 2f, (currentRoom.lowerBounds.y + currentRoom.upperBounds.y) / 2f, 0f);
-
-        // Get nearest spawn point in room nearest to player
-        player.gameObject.transform.position = HelperUtilities.GetSpawnPositionNearestToPlayer(player.gameObject.transform.position);
+        
 
     }
 
