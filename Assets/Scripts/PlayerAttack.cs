@@ -20,12 +20,14 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
+
+            animator.SetBool("Attack", false);
         }
     }
 
     void Attack()
     {
-        animator.SetTrigger("Attack");
+        animator.SetBool("Attack", true);
 
         Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 
@@ -33,13 +35,13 @@ public class PlayerAttack : MonoBehaviour
         {
             enemy.GetComponent<EnemyDie>().TakeDamage(20);
         }
+        animator.SetBool("Attack", false);
     }
 
     void OnDrawGizmosSelected()
     {
-        if(attackPoint == null)
-        
-            return;
+        if (attackPoint == null)
+        { return; }
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
