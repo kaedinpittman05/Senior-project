@@ -237,6 +237,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1758212423393692776, guid: 0282a7d9719d09c41afa23e3bd8e4011, type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758212423393692776, guid: 0282a7d9719d09c41afa23e3bd8e4011, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
     - target: {fileID: 1804733153050492295, guid: 0282a7d9719d09c41afa23e3bd8e4011, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -249,6 +257,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1276902579
       objectReference: {fileID: 0}
+    - target: {fileID: 3053198212738750604, guid: 0282a7d9719d09c41afa23e3bd8e4011, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3d6e65daf062b9f4dac92760b5cc5a64, type: 2}
     - target: {fileID: 3268795021941854168, guid: 0282a7d9719d09c41afa23e3bd8e4011, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -427,6 +439,25 @@ MonoBehaviour:
   threeHealth: {fileID: 21300000, guid: f26ac604657ccff4891bdf44383d9ed2, type: 3}
   twoHealth: {fileID: 21300000, guid: faa7f4eb436083a4e9f1456fd83763d2, type: 3}
   oneHealth: {fileID: 21300000, guid: 850a160455295224081e71b07d757308, type: 3}
+--- !u!1 &884354254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5015013471649329551, guid: 5f142ee165c4a054b8b33ad2a13b7281, type: 3}
+  m_PrefabInstance: {fileID: 1280476947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &884354264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884354254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfe1a4262be47994e80bbc759b2cfefd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  maxHealth: 100
 --- !u!1 &1028109486
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +536,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028109486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.365408, y: 0.9199009, z: -9.977989}
+  m_LocalPosition: {x: -2.365406, y: 0.9199009, z: -9.977989}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -806,6 +837,39 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -526094019030321774, guid: bcd60a66cd469f44c8416e53a1ce699c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bcd60a66cd469f44c8416e53a1ce699c, type: 3}
+--- !u!1 &1628773016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5417910117712333417, guid: bcd60a66cd469f44c8416e53a1ce699c, type: 3}
+  m_PrefabInstance: {fileID: 1385021556}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1628773028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628773016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfe1a4262be47994e80bbc759b2cfefd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 1628773029}
+  maxHealth: 100
+--- !u!114 &1628773029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628773016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57bfb1c76b933524c89596f5d53648b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDetails: {fileID: 0}
+  spriteRendererArray: []
 --- !u!1001 &1888689313
 PrefabInstance:
   m_ObjectHideFlags: 0

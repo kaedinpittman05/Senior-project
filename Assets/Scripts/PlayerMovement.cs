@@ -18,14 +18,14 @@ public class PlayerMovement : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         //Floats for the animator
-        if(movement.y < -.5 )
+        if(movement.y > .5)
         {
             animator.SetBool("Up", true);
             animator.SetBool("Down", false);
             animator.SetBool("Left", false);
             animator.SetBool("Right", false);
         }
-        else if (movement.y > .5)
+        else if (movement.y < -.5)
         {
             animator.SetBool("Up", false);
             animator.SetBool("Down", true);

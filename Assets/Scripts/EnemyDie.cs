@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class EnemyDie : MonoBehaviour
 {
-    [HideInInspector] public Enemy enemy;
+    public Enemy enemy;
     public int maxHealth = 100;
-    int currentHealth;
+    private int currentHealth;
 
     // Start is called before the first frame update
     void Start()

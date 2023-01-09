@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -9,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform attackPoint;
     public float attackRange;
     public LayerMask enemyLayer;
+    public TagAttribute enemyTag;
 
     public int attackDamage = 40;
 
@@ -20,7 +22,9 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Attack();
-
+        }
+        else
+        {
             animator.SetBool("Attack", false);
         }
     }
@@ -35,7 +39,7 @@ public class PlayerAttack : MonoBehaviour
         {
             enemy.GetComponent<EnemyDie>().TakeDamage(20);
         }
-        animator.SetBool("Attack", false);
+        
     }
 
     void OnDrawGizmosSelected()
