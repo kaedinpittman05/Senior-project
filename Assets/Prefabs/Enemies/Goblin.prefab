@@ -20,8 +20,11 @@ GameObject:
   - component: {fileID: 8314453542486877726}
   - component: {fileID: -8286124944061979972}
   - component: {fileID: 7480050625267369233}
+<<<<<<< HEAD
   - component: {fileID: 7029807524100981260}
 >>>>>>> d29aaa95a48462779db593b34a25b2bd4a1843c2
+=======
+>>>>>>> 2faf1586faf4e69391d0eee6431b5b9eb163b377
   m_Layer: 15
   m_Name: Goblin
   m_TagString: Enemy
@@ -49,7 +52,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5015013471649329550
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -66,7 +69,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &4172863492457993204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +247,7 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
+<<<<<<< HEAD
 --- !u!114 &7029807524100981260
 >>>>>>> d29aaa95a48462779db593b34a25b2bd4a1843c2
 MonoBehaviour:
@@ -266,6 +270,8 @@ MonoBehaviour:
   enemyDetails: {fileID: 0}
   spriteRendererArray: []
 >>>>>>> d29aaa95a48462779db593b34a25b2bd4a1843c2
+=======
+>>>>>>> 2faf1586faf4e69391d0eee6431b5b9eb163b377
 --- !u!1 &5015013471864025146
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +443,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &5015013471889843770
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -454,7 +460,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &5015013472166880520
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +803,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &5015013473091707453
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -814,4 +820,4 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
