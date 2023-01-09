@@ -19,12 +19,13 @@ public static class Setting
 
     public const int maxChildCorridors = 3; // Maz number of child coridors leading from a room. - mazimum should be 3 although this is not reccomended 
     // it can cause the dungeon building to fail since the rooms are more likely to not fit togeather;
+    public const float doorUnlockDelay = 1f;
 
 
     #endregion
 
     #region ANIMATOR PARAMETERS
- 
+
     // Animator parameters - Door
     public static int open = Animator.StringToHash("open");
     #endregion

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -631,6 +631,7 @@ MonoBehaviour:
   speed: 3
   target: {fileID: 0}
   minDistance: 3
+  maxDistance: 0
   projectile: {fileID: 5956940105683321423, guid: de4f27057cdb4f7469c3bfe691ed9d2b, type: 3}
   timeBetweenShots: 5
 --- !u!212 &396823563
@@ -762,7 +763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &469251018
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2767,7 +2768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 0
-  startingTime: 360
+  startingTime: 0
   countdownText: {fileID: 1219376599}
 --- !u!1 &1039822407
 GameObject:

@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public float health = 6f;
-    public GameObject heart1;
-    public GameObject heart2;
-    public GameObject heart3;
+    public GameObject hearts;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             health = health - 1;
+            hearts.GetComponent<HealthTracking>().Damage();
             Debug.Log(health);
             if (health <= 0)
             {

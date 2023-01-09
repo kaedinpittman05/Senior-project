@@ -28,4 +28,26 @@ public class Enemy : MonoBehaviour
         spriteRendererArray = GetComponentsInChildren<SpriteRenderer>();
        
     }
+
+    
+
+
+    /// <summary>
+    /// Enemy destroyed
+    /// </summary>
+    public void EnemyDestroyed()
+    {
+        DestroyedEvent destroyedEvent = GetComponent<DestroyedEvent>();
+        destroyedEvent.CallDestroyedEvent(false, 6);
+    }
+
+    /// <summary>
+    /// Initialise the enemy
+    /// </summary>
+    public void EnemyInitialization(EnemyDetailsSO enemyDetails, int enemySpawnNumber, DungeonLevelSO dungeonLevel)
+    {
+        this.enemyDetails = enemyDetails;
+
+        
+    }
 }
