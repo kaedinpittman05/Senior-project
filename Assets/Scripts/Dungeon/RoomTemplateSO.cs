@@ -95,10 +95,6 @@ public class RoomTemplateSO : ScriptableObject
 
     public List<RoomEnemySpawnParameters> roomEnemySpawnParametersList;
 
-
-
-
-
     /// <summary>
     /// Returns the list of Entrances for the room template
     /// </summary>
@@ -124,7 +120,9 @@ public class RoomTemplateSO : ScriptableObject
         HelperUtilities.ValidateCheckNullValue(this, nameof(prefab), prefab);
         HelperUtilities.ValidateCheckNullValue(this, nameof(roomNodeType), roomNodeType);
 
-         // Check enemies and room spawn parameters for levels
+        HelperUtilities.ValidateCheckEnumerableValues(this, nameof(doorwayList), doorwayList);
+
+        // Check enemies and room spawn parameters for levels
         if (enemiesByLevelList.Count > 0 || roomEnemySpawnParametersList.Count > 0)
         {
             HelperUtilities.ValidateCheckEnumerableValues(this, nameof(enemiesByLevelList), enemiesByLevelList);
@@ -161,8 +159,7 @@ public class RoomTemplateSO : ScriptableObject
                     Debug.Log("No enemy types specified in for dungeon level " + roomEnemySpawnParameters.dungeonLevel.levelName + " in gameobject " + this.name.ToString());
                 }
             }
-
-        HelperUtilities.ValidateCheckEnumerableValues(this, nameof(doorwayList), doorwayList);
+        }
 
         // Check spawn positions populated
         HelperUtilities.ValidateCheckEnumerableValues(this, nameof(spawnPositionArray), spawnPositionArray);
@@ -171,5 +168,4 @@ public class RoomTemplateSO : ScriptableObject
 #endif
 
     #endregion Validation
-}
 }

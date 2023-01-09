@@ -56,9 +56,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         // Subscribe to room changed event.
         StaticEventHandler.OnRoomChanged += StaticEventHandler_OnRoomChanged;
 
-        // Subscribe to room enemies defeated event
-        StaticEventHandler.OnRoomEnemiesDefeated += StaticEventHandler_OnRoomEnemiesDefeated;
-
     }
 
 
@@ -66,9 +63,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     {
         // Unsubscribe from room changed event
         StaticEventHandler.OnRoomChanged -= StaticEventHandler_OnRoomChanged;
-
-        // Unsubscribe from room enemies defeated event
-        StaticEventHandler.OnRoomEnemiesDefeated -= StaticEventHandler_OnRoomEnemiesDefeated;
 
         
 
@@ -82,13 +76,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         SetCurrentRoom(roomChangedEventArgs.room);
     }
 
-    /// <summary>
-    /// Handle room enemies defeated event
-    /// </summary>
-    private void StaticEventHandler_OnRoomEnemiesDefeated(RoomEnemiesDefeatedArgs roomEnemiesDefeatedArgs)
-    {
-        RoomEnemiesDefeated();
-    }
+    
 
 
     /// <summary>
@@ -238,7 +226,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         /// <summary>
         /// Get the current room the player is in
         /// </summary>
-        public Room GetCurrentRoom()
+    public Room GetCurrentRoom()
     {
         return currentRoom;
     }
