@@ -33,7 +33,6 @@ public class EnemySpawner : SingletonMonoBehaviour<EnemySpawner>
 
         currentRoom = roomChangedEventArgs.room;
 
-       
 
         // if the room is a corridor or the entrance then return
         if (currentRoom.roomNodeType.isCorridorEW || currentRoom.roomNodeType.isCorridorNS || currentRoom.roomNodeType.isEntrance)
@@ -60,7 +59,6 @@ public class EnemySpawner : SingletonMonoBehaviour<EnemySpawner>
         // Get concurrent number of enemies to spawn
         enemyMaxConcurrentSpawnNumber = GetConcurrentEnemies();
 
-
         // Lock doors
         currentRoom.instantiatedRoom.LockDoors();
 
@@ -73,7 +71,6 @@ public class EnemySpawner : SingletonMonoBehaviour<EnemySpawner>
     /// </summary>
     private void SpawnEnemies()
     {
-
         // Set gamestate engaging enemies
         if (GameManager.Instance.gameState == GameState.playingLevel)
         {
@@ -152,50 +149,6 @@ public class EnemySpawner : SingletonMonoBehaviour<EnemySpawner>
         // Initialize Enemy
         enemy.GetComponent<Enemy>().EnemyInitialization(enemyDetails, enemiesSpawnedSoFar, dungeonLevel);
 
-        // subscribe to enemy destroyed event
-        enemy.GetComponent<DestroyedEvent>().OnDestroyed += Enemy_OnDestroyed;
-
-    }
-
-    /// <summary>
-    /// Process enemy destroyed
-    /// </summary>
-    private void Enemy_OnDestroyed(DestroyedEvent destroyedEvent, DestroyedEventArgs destroyedEventArgs)
-    {
-        // Unsubscribe from event
-        destroyedEvent.OnDestroyed -= Enemy_OnDestroyed;
-
-        // reduce current enemy count
-        currentEnemyCount--;
-
-        // Score points - call points scored event
-        StaticEventHandler.CallPointsScoredEvent(destroyedEventArgs.points);
-
-        if (currentEnemyCount <= 0 && enemiesSpawnedSoFar == enemiesToSpawn)
-        {
-            currentRoom.isClearedOfEnemies = true;
-
-            // Set game state
-            if (GameManager.Instance.gameState == GameState.engagingEnemies)
-            {
-                GameManager.Instance.gameState = GameState.playingLevel;
-                GameManager.Instance.previousGameState = GameState.engagingEnemies;
-            }
-
-            else if (GameManager.Instance.gameState == GameState.engagingBoss)
-            {
-                GameManager.Instance.gameState = GameState.bossStage;
-                GameManager.Instance.previousGameState = GameState.engagingBoss;
-            }
-
-            // unlock doors
-            currentRoom.instantiatedRoom.UnlockDoors(Setting.doorUnlockDelay);
-
-            
-
-            // Trigger room enemies defeated event
-            StaticEventHandler.CallRoomEnemiesDefeatedEvent(currentRoom);
-        }
     }
 
 }

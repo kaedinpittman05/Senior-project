@@ -63,7 +63,6 @@ public class Door : MonoBehaviour
             // Set open parameter in animator
             animator.SetBool(Setting.open, true);
 
-            
         }
     }
 

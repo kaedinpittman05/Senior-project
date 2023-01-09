@@ -15,23 +15,8 @@ public class InstantiatedRoom : MonoBehaviour
     [HideInInspector] public Tilemap frontTilemap;
     [HideInInspector] public Tilemap collisionTilemap;
     [HideInInspector] public Tilemap minimapTilemap;
+    [HideInInspector] public int[,] aStarMovementPenalty;  // use this 2d array to store movement penalties from the tilemaps to be used in AStar pathfinding
     [HideInInspector] public Bounds roomColliderBounds;
-
-
-    #region Header OBJECT REFERENCES
-
-    [Space(10)]
-    [Header("OBJECT REFERENCES")]
-
-    #endregion Header OBJECT REFERENCES
-
-    #region Tooltip
-
-    [Tooltip("Populate with the environment child placeholder gameobject ")]
-
-    #endregion Tooltip
-
-    [SerializeField] private GameObject environmentGameObject;
 
     private BoxCollider2D boxCollider2D;
 
@@ -41,27 +26,49 @@ public class InstantiatedRoom : MonoBehaviour
 
         // Save room collider bounds
         roomColliderBounds = boxCollider2D.bounds;
+
     }
 
-    // Initialise the Instantiated Room
+    // Trigger room changed event when player enters a room
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // If the player triggered the collider
+        if (collision.tag == Setting.playerTag && room != GameManager.Instance.GetCurrentRoom())
+        {
+            // Set room as visited
+            this.room.isPreviouslyVisited = true;
+
+            // Call room changed event
+            StaticEventHandler.CallRoomChangedEvent(room);
+        }
+    }
+
+    /// <summary>
+    /// Initialise The Instantiated Room
+    /// </summary>
     public void Initialise(GameObject roomGameobject)
     {
         PopulateTilemapMemberVariables(roomGameobject);
 
         BlockOffUnusedDoorWays();
 
+        
+
         AddDoorsToRooms();
 
         DisableCollisionTilemapRenderer();
+
     }
 
-    // populate the tilemap and grid member variables
+    /// <summary>
+    /// Populate the tilemap and grid memeber variables.
+    /// </summary>
     private void PopulateTilemapMemberVariables(GameObject roomGameobject)
     {
-        // Get the grid component
+        // Get the grid component.
         grid = roomGameobject.GetComponentInChildren<Grid>();
 
-        // Get tile maps in children
+        // Get tilemaps in children.
         Tilemap[] tilemaps = roomGameobject.GetComponentsInChildren<Tilemap>();
 
         foreach (Tilemap tilemap in tilemaps)
@@ -93,9 +100,7 @@ public class InstantiatedRoom : MonoBehaviour
 
         }
 
-        
     }
-
 
     /// <summary>
     /// Block Off Unused Doorways In The Room
@@ -140,7 +145,6 @@ public class InstantiatedRoom : MonoBehaviour
             }
         }
     }
-
 
     /// <summary>
     /// Block a doorway on a tilemap layer
@@ -216,7 +220,9 @@ public class InstantiatedRoom : MonoBehaviour
         }
     }
 
-    // <summary>
+
+
+    /// <summary>
     /// Add opening doors if this is not a corridor room
     /// </summary>
     private void AddDoorsToRooms()
@@ -260,7 +266,6 @@ public class InstantiatedRoom : MonoBehaviour
                     door.transform.localPosition = new Vector3(doorway.position.x, doorway.position.y + tileDistance * 1.25f, 0f);
                 }
 
-
                 // Get door component
                 Door doorComponent = door.GetComponent<Door>();
 
@@ -271,15 +276,13 @@ public class InstantiatedRoom : MonoBehaviour
 
                     // lock the door to prevent access to the room
                     doorComponent.LockDoor();
-
-                   
-
                 }
             }
 
         }
 
     }
+
 
     /// <summary>
     /// Disable collision tilemap renderer
@@ -300,27 +303,6 @@ public class InstantiatedRoom : MonoBehaviour
     }
 
     /// <summary>
-    /// Enable the room trigger collider that is used to trigger when the player enters a room
-    /// </summary>
-    public void EnableRoomCollider()
-    {
-        boxCollider2D.enabled = true;
-    }
-
-    public void ActivateEnvironmentGameObjects()
-    {
-        if (environmentGameObject != null)
-            environmentGameObject.SetActive(true);
-    }
-
-    public void DeactivateEnvironmentGameObjects()
-    {
-        if (environmentGameObject != null)
-            environmentGameObject.SetActive(false);
-    }
-
-
-    /// <summary>
     /// Lock the room doors
     /// </summary>
     public void LockDoors()
@@ -335,34 +317,6 @@ public class InstantiatedRoom : MonoBehaviour
 
         // Disable room trigger collider
         DisableRoomCollider();
-    }
-
-    /// <summary>
-    /// Unlock the room doors
-    /// </summary>
-    public void UnlockDoors(float doorUnlockDelay)
-    {
-        StartCoroutine(UnlockDoorsRoutine(doorUnlockDelay));
-    }
-
-    /// <summary>
-    /// Unlock the room doors routine
-    /// </summary>
-    private IEnumerator UnlockDoorsRoutine(float doorUnlockDelay)
-    {
-        if (doorUnlockDelay > 0f)
-            yield return new WaitForSeconds(doorUnlockDelay);
-
-        Door[] doorArray = GetComponentsInChildren<Door>();
-
-        // Trigger open doors
-        foreach (Door door in doorArray)
-        {
-            door.UnlockDoor();
-        }
-
-        // Enable room trigger collider
-        EnableRoomCollider();
     }
 
 }
