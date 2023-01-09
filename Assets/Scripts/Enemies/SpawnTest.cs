@@ -42,5 +42,15 @@ public class SpawnTest : MonoBehaviour
         }
     }
 
-    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+
+            EnemyDetailsSO enemyDetails = randomEnemyHelperClass.GetItem();
+
+            if (enemyDetails != null)
+                instantiatedEnemyList.Add(Instantiate(enemyDetails.enemyPrefab));
+        }
+    }
 }

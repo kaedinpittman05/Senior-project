@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -67,4 +68,5 @@ public class RandomSpawnableObject<T>
 
         return spawnableObject;
     }
+
 }

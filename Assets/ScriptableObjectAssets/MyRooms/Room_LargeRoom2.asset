@@ -51,7 +51,11 @@ MonoBehaviour:
     doorwayCopyTileHeight: 6
     isConnected: 0
     isUnavailable: 0
-  spawnPositionArray: []
+  spawnPositionArray:
+  - {x: -10, y: 27}
+  - {x: 13, y: 7}
+  - {x: 23, y: 17}
+  - {x: 10, y: 38}
   enemiesByLevelList:
   - dungeonLevel: {fileID: 11400000, guid: 7e33d0e2fe7fa72418828f8dea048da3, type: 2}
     spawnableObjectRatioList:
