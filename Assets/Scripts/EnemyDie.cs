@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyDie : MonoBehaviour
 {
-    public Enemy enemy;
+    public GameObject enemy;
     public int maxHealth = 100;
     private int currentHealth;
 
@@ -26,6 +26,6 @@ public class EnemyDie : MonoBehaviour
 
     void Die()
     {
-        enemy.EnemyDestroyed();
+        Destroy(enemy);
     }
 }

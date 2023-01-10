@@ -8,6 +8,7 @@ public class RetreatEnemy : MonoBehaviour
     public Transform target;
     public float minDistance;
     public float maxDistance;
+    public float activeDistance;
 
     public GameObject projectile;
     public float timeBetweenShots;
@@ -23,21 +24,24 @@ public class RetreatEnemy : MonoBehaviour
     void Update()
     {
 
-        
 
-        if (Time.time > nextShotTime) 
-        { 
-            Instantiate(projectile, transform.position, Quaternion.identity);
-            nextShotTime = Time.time + timeBetweenShots;
-        }
 
-        if (target == null)
+        if (Vector2.Distance(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= activeDistance)
         {
-            SetTarget();
-        }
-        else
-        {
-            Move();
+            if (Time.time > nextShotTime)
+            {
+                Instantiate(projectile, transform.position, Quaternion.identity);
+                nextShotTime = Time.time + timeBetweenShots;
+            }
+
+            if (target == null)
+            {
+                SetTarget();
+            }
+            else
+            {
+                Move();
+            } 
         }
 
 

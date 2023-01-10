@@ -17,6 +17,7 @@ namespace Pathfinding {
 		/// <summary>The object that the AI should move to</summary>
 		public Transform target;
 		IAstarAI ai;
+		public  float minDistance;
 
 		void OnEnable () {
 			ai = GetComponent<IAstarAI>();
@@ -42,7 +43,10 @@ namespace Pathfinding {
 
 		void SetTarget()
 		{
-			target = GameObject.FindGameObjectWithTag("Player").transform;
+			if (Vector2.Distance(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= minDistance)
+			{
+				target = GameObject.FindGameObjectWithTag("Player").transform;
+			}
 		}
 	}
 }
