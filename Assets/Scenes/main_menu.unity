@@ -3266,7 +3266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &918381627
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5144,7 +5144,7 @@ MonoBehaviour:
     These are the controls needed
     to embark on this adventure
 
-    Movemend - WASD
+    Movement - WASD
 
     Attack - Left Mouse
 
@@ -5612,7 +5612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1365455373
 RectTransform:
   m_ObjectHideFlags: 0
