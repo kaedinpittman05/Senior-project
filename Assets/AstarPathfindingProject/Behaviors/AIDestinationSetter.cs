@@ -41,6 +41,7 @@ namespace Pathfinding {
 			else if (target != null && ai != null) ai.destination = target.position;
 		}
 
+		// Set this object's target variable to the first object with tag "Player" within this objects range of activity
 		void SetTarget()
 		{
 			if (Vector2.Distance(this.gameObject.transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= minDistance)
