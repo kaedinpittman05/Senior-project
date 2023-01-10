@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/multi-test.unity
     guid: c8bb4c3751268964fbbf8c3a5e984102
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Movement_Test.unity
     guid: b68c973fd70414d4eb2c05959c8c2f85
   m_configObjects: {}
