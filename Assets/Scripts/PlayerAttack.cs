@@ -23,15 +23,11 @@ public class PlayerAttack : MonoBehaviour
         {
             Attack();
         }
-        else
-        {
-            animator.SetBool("Attack", false);
-        }
     }
 
     void Attack()
     {
-        animator.SetBool("Attack", true);
+        animator.SetTrigger("Attack");
 
         Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
 

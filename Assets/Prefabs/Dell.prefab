@@ -128,7 +128,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3053198212738750604
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -145,7 +145,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!50 &627797572702908924
 Rigidbody2D:
   serializedVersion: 4
@@ -222,10 +222,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 3053198212738750604}
   attackPoint: {fileID: 3718257228133316365}
-  attackRange: 5
+  attackRange: 1
   enemyLayer:
     serializedVersion: 2
     m_Bits: 32768
+  attackDamage: 40
 --- !u!114 &6017281018540106268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,9 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  heart1: {fileID: 0}
-  heart2: {fileID: 0}
-  heart3: {fileID: 0}
+  hearts: {fileID: 0}
 --- !u!114 &-4513835934826528568
 MonoBehaviour:
   m_ObjectHideFlags: 0
