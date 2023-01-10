@@ -17,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         // If the left mouse button is clicked then the attack method is called
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown("space"))
         {
             Attack();
         }

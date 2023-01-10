@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class PauseMenu : MonoBehaviour
@@ -50,6 +51,7 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         currentTime = startingTime;
+        Resume();
     }
 
     //Resumes game
@@ -58,6 +60,8 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+       
+
     }
 
     //Pauses game and brings up pause menu.
@@ -66,5 +70,13 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+
+    }
+    //Returns to Menu
+   public void ReturnMenu ()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        FindObjectOfType<AudioManager>().StopPlaying("BattleTheme");
+
     }
 }

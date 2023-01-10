@@ -24,6 +24,7 @@ public class EndGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Checks if Boss is alive, if not saves scores and move to Credits
         if (GameObject.FindGameObjectWithTag("Boss") == null)
         {
             time = int.Parse(countdownText.text);
@@ -34,10 +35,11 @@ public class EndGame : MonoBehaviour
             PushCommand(string.Format("INSERT INTO Scores (time) Values ({0});", time), connection);
 
             SceneManager.LoadScene("Credits");
+            FindObjectOfType<AudioManager>().StopPlaying("BattleTheme");
         }
     }
 
-
+    //Pushs command to database
     void PushCommand(string commandString, IDbConnection connection)
     {
         // Create new command
