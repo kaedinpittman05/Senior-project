@@ -15,7 +15,7 @@ public class HealthTracking : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        FindObjectOfType<AudioManager>().Play("BattleTheme");
     }
 
     // Update is called once per frame

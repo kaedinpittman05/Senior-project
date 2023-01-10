@@ -11,7 +11,6 @@ using System.Diagnostics;
 public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
-
     public Dropdown resolutionDropdown;
     public Slider musicSlider;
     public Slider soundSlider;

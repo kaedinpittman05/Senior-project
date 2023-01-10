@@ -16,16 +16,18 @@ public class EnemyDie : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage; 
-
-        if(currentHealth <= 0)
+        currentHealth -= damage;
+        FindObjectOfType<AudioManager>().Play("SlimeHurt");
+        if (currentHealth <= 0)
         {
             Die();
+        
         }
     }
 
     void Die()
     {
         Destroy(enemy);
+        FindObjectOfType<AudioManager>().Play("Slime Death");
     }
 }

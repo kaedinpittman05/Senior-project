@@ -13,7 +13,7 @@ public class toMenu : MonoBehaviour
         //Checks if escape is pressed, if yes, go back one in the scene index
         if (Input.GetKeyDown("escape"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
         }
     }
 }

@@ -67,7 +67,7 @@ public class AudioManager : MonoBehaviour
     //PLays title theme on start.
     void Start ()
     {
-        Play("titletheme");
+       
     }
    
 

@@ -3266,7 +3266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &918381627
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5557,6 +5557,18 @@ MonoBehaviour:
           m_StringArgument: Button Click
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1365455374}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1360682889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5612,7 +5624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1365455373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6026,6 +6038,7 @@ GameObject:
   - component: {fileID: 1495232794}
   - component: {fileID: 1495232793}
   - component: {fileID: 1495232797}
+  - component: {fileID: 1495232798}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6134,6 +6147,18 @@ MonoBehaviour:
   resolutionDropdown: {fileID: 18517326}
   musicSlider: {fileID: 1215928198}
   soundSlider: {fileID: 1045228195}
+--- !u!114 &1495232798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495232792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7956aa1b57889a4aa76b33277d25a1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1535558075
 GameObject:
   m_ObjectHideFlags: 0

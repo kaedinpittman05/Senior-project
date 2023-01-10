@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Down", false);
             animator.SetBool("Left", false);
             animator.SetBool("Right", false);
+
         }
         else if (movement.y < -.5)
         {
@@ -31,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Down", true);
             animator.SetBool("Left", false);
             animator.SetBool("Right", false);
+     
 
         }
         else if (movement.x < -.5)
@@ -40,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Left", true);
             animator.SetBool("Right", false);
 
+
         }
         else if (movement.x > .5)
         {
@@ -47,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Down", false);
             animator.SetBool("Left", false);
             animator.SetBool("Right", true);
+    
         }
         else
         {
@@ -54,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Down", false);
             animator.SetBool("Left", false);
             animator.SetBool("Right", false);
+         
         }
        // animator.SetBool("Up", true);
 
