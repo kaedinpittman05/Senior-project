@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 
+
+/// <summary>
+/// Will be implamented at a later time
+/// </summary>
+
 [DisallowMultipleComponent]
 public class DungeonBulider : SingletonMonoBehaviour<DungeonBulider>
 {

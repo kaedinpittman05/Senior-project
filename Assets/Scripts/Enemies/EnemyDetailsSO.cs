@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/// <summary>
+/// Will be implamented at a later time
+/// </summary>
+
 [CreateAssetMenu(fileName = "EnemyDetails_", menuName = "Scriptable Objects/Enemy/EnemyDetails")]
 public class EnemyDetailsSO : ScriptableObject
 {
