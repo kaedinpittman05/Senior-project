@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class EnemyRun : MonoBehaviour
 {
+    // Variables for the animator, position, and direction
+    public Animator animator;
+
     Vector3 previousPosition;
     Vector3 lastMoveDirection;
 
-    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,18 +17,15 @@ public class EnemyRun : MonoBehaviour
         lastMoveDirection = Vector3.zero;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // If the postion if not equal to it's previous position then it sets the difference in the postions
     private void FixedUpdate()
     {
         if (transform.position != previousPosition)
         {
             lastMoveDirection = (transform.position - previousPosition).normalized;
             previousPosition = transform.position;
-            //Debug.Log("Enemy Moevment"+lastMoveDirection + previousPosition);
+
+            // Sets the booleans for the enemy movement for the animator
             if (lastMoveDirection.y >= 0)
             {
                 Debug.Log("ENEMY UP");
@@ -52,6 +51,8 @@ public class EnemyRun : MonoBehaviour
                 animator.SetBool("Left", false);
                 animator.SetBool("Right", true);
             }
+
+            // Sets the float for the speed of the enemy for the animator
             animator.SetFloat("Speed", lastMoveDirection.sqrMagnitude);
         }
     }

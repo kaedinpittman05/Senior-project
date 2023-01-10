@@ -1,5 +1,10 @@
 using UnityEngine;
 
+
+/// <summary>
+/// Will be implamented at a later time
+/// </summary>
+
 [System.Serializable]
 public class RoomEnemySpawnParameters
 {
