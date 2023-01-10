@@ -1,5 +1,10 @@
 ﻿using UnityEngine;
 [System.Serializable]
+
+
+/// <summary>
+/// Will be implamented at a later time
+/// </summary>
 public class Doorway 
 {
     public Vector2Int position;

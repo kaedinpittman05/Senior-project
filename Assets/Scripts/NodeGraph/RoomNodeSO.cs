@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+/// Will be implamented at a later time
+/// </summary>
+
 public class RoomNodeSO : ScriptableObject
 {
     [HideInInspector] public string id;

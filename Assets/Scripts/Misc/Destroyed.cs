@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Will be implamented at a later time
+/// </summary>
+
 [RequireComponent(typeof(DestroyedEvent))]
 [DisallowMultipleComponent]
 public class Destroyed : MonoBehaviour

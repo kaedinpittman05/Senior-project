@@ -2,6 +2,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+/// <summary>
+/// Will be implamented at a later time
+/// </summary>
+
 #region REQUIRE COMPONENTS
 
 [RequireComponent(typeof(SortingGroup))]

@@ -5,6 +5,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Will be implamented at a later time
+/// </summary>
+
 [DisallowMultipleComponent]
 public class GameManager : SingletonMonoBehaviour<GameManager>
 {

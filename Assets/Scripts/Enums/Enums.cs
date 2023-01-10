@@ -1,4 +1,9 @@
-﻿public enum Orientation
+﻿
+/// <summary>
+/// Will be implamented at a later time
+/// </summary>
+
+public enum Orientation
 {
     north,
     east,

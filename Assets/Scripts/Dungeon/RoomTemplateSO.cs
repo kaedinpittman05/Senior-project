@@ -2,6 +2,11 @@
 using UnityEditor;
 using UnityEngine;
 
+
+/// <summary>
+/// Will be implamented at a later time
+/// </summary>
+
 [CreateAssetMenu(fileName = "Room_", menuName = "Scriptable Objects/Dungeon/Room")]
 public class RoomTemplateSO : ScriptableObject
 {

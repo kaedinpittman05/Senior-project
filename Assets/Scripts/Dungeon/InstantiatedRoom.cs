@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+
+/// <summary>
+/// Will be implamented at a later time
+/// </summary>
+
 [DisallowMultipleComponent]
 [RequireComponent(typeof(BoxCollider2D))]
 public class InstantiatedRoom : MonoBehaviour

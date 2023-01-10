@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Will be implamented at a later time
+/// </summary>
+
 [DisallowMultipleComponent]
 public class PoolManager : SingletonMonoBehaviour<PoolManager>
 {
