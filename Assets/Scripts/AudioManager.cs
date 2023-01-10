@@ -12,14 +12,7 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        //Checks if there is already an audio manager in the scene
-        if(instance == null)
-            instance = this;
-        else
-        {
-            Destroy(gameObject);
-        }
-
+        
 
 
 
