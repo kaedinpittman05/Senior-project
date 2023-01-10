@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-
+    // Variables for the rigidbody, animator, movement speed, and the movement
     public Rigidbody2D rb;
     public Animator animator;
 
+    public float moveSpeed = 5f;
+
     Vector2 movement;
+
     // Update is called once per frame
     void Update()
     {
-        //Inputs for up(w), down(s), left(a), and right(d) keys
+        // Inputs for up(w), down(s), left(a), and right(d) keys
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        //Floats for the animator
-        if(movement.y > .5)
+        // Sets the booleans for the player movement for the animator
+        if (movement.y > 0)
         {
             animator.SetBool("Up", true);
             animator.SetBool("Down", false);
@@ -26,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Right", false);
 
         }
-        else if (movement.y < -.5)
+        else if (movement.y < 0)
         {
             animator.SetBool("Up", false);
             animator.SetBool("Down", true);
@@ -35,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
      
 
         }
-        else if (movement.x < -.5)
+        else if (movement.x < 0)
         {
             animator.SetBool("Up", false);
             animator.SetBool("Down", false);
@@ -44,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         }
-        else if (movement.x > .5)
+        else if (movement.x > 0)
         {
             animator.SetBool("Up", false);
             animator.SetBool("Down", false);
@@ -60,16 +62,14 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Right", false);
          
         }
-       // animator.SetBool("Up", true);
 
-        //animator.SetFloat("Horizontal", movement.x);
-        //animator.SetFloat("Vertical", movement.y);
+        // Sets the float for the speed of the player for the animator
         animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     private void FixedUpdate()
     {
-        //Moves character based on key input and speed 
+        // Moves character based on key input and speed 
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
