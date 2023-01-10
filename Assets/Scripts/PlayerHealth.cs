@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Enemy" && CheckIfVulnerable())
+        if (other.gameObject.tag == "Enemy" && CheckIfVulnerable() || other.gameObject.tag == "Boss" && CheckIfVulnerable())
         {
             health = health - 1;
             hearts.GetComponent<HealthTracking>().Damage();
