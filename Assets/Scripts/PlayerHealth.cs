@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public float health = 6f;
-    public GameObject hearts;
+    public GameObject hearts; // The healthbar image to update upon taking damage
     private float timeLastHit = -1.5f;
     private float timeLastFlashed;
+    public float timeInvulnerable = 1.5f;
     private bool spritesDisabled = false;
 
     // Start is called before the first frame update
@@ -22,6 +23,8 @@ public class PlayerHealth : MonoBehaviour
     {
         FlashOnHit();
     }
+
+    // Applies damage logic when the player collides with an enemy or boss
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Enemy" && CheckIfVulnerable() || other.gameObject.tag == "Boss" && CheckIfVulnerable())
@@ -38,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    // Causes the player sprites to flash while the player is in post-hit invulnerability
     private void FlashOnHit()
     {
         if (!CheckIfVulnerable())
@@ -71,10 +75,11 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    // Checks if the player has taken damage recently in order to keep track of when they should be invulnerable
     private bool CheckIfVulnerable()
     {
         bool isVulnerable;
-        if (timeLastHit <= Time.time - 1.5)
+        if (timeLastHit <= Time.time - timeInvulnerable)
         {
             isVulnerable = true;
         }
