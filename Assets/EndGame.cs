@@ -12,13 +12,14 @@ public class EndGame : MonoBehaviour
     private string dbName = "game_database";
     IDbConnection connection;
     [SerializeField] Text countdownText;
+    
 
     private int time;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        PushCommand(string.Format("CREATE TABLE IF NOT EXISTS \"Scores\" (\r\n\t\"Run\"\tINTEGER NOT NULL UNIQUE,\r\n\t\"Time\"\tREAL,\r\n\tPRIMARY KEY(\"Run\")\r\n)"), connection);
     }
 
     // Update is called once per frame
