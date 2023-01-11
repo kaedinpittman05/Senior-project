@@ -24,6 +24,7 @@ public class EnemyDie : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            Debug.Log("help");
         }
     }
 
