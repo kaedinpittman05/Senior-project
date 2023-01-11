@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
+    // Start of particles
+       //public ParticleSystem particle;
+
     public float moveSpeed = 5f;
 
     Vector2 movement;
