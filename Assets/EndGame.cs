@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using Mono.Data.Sqlite;
 using System.Data;
 using UnityEngine.UI;
+using static Unity.VisualScripting.Member;
 
 public class EndGame : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class EndGame : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Boss") == null)
         {
             time = int.Parse(countdownText.text);
-            connection = new SqliteConnection(string.Format("URI=file:Assets/Streaming Assets/{0}.db", dbName));
+            connection = new SqliteConnection("Data Source="+ Application.dataPath + "\\StreamingAssets\\" + dbName + ".db");
 
             connection.Open();
 

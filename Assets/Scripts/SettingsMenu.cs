@@ -23,7 +23,7 @@ public class SettingsMenu : MonoBehaviour
     void Start ()
     {
         //Gets volumes from database, puts them into the audiomixer
-        connection = new SqliteConnection(string.Format("URI=file:Assets/Streaming Assets/{0}.db", dbName));
+        connection = new SqliteConnection("Data Source=" + Application.dataPath + "\\StreamingAssets\\" + dbName + ".db");
 
         connection.Open();
 
@@ -143,7 +143,8 @@ public class SettingsMenu : MonoBehaviour
     {
         float music = musicSlider.value;
         float sound = soundSlider.value;
-        
+
+        connection = new SqliteConnection("Data Source=" + Application.dataPath + "\\StreamingAssets\\" + dbName + ".db");
         connection.Open();
      
         PushCommand(string.Format("UPDATE Settings SET music = {0}, sound = {1}  WHERE Current = 1;", music, sound), connection);
@@ -152,9 +153,7 @@ public class SettingsMenu : MonoBehaviour
         
 
 
-        
-        UnityEngine.Debug.Log(music);
-        UnityEngine.Debug.Log(sound);
+     
         connection.Close();
 
 
