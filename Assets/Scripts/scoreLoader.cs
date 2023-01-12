@@ -5,6 +5,7 @@ using Mono.Data.Sqlite;
 using System.Collections;
 using System.Diagnostics;
 using UnityEngine.UI;
+using System.IO;
 public class scoreLoader : MonoBehaviour
 {
    
@@ -20,11 +21,18 @@ public class scoreLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         //Opens sqlite connectiosn, reads run and time, puts them into scores
         connection = new SqliteConnection(string.Format("URI=file:Assets/Streaming Assets/{0}.db", dbName));
         connection.Open();
-        
-        IDataReader dataReader = ReadSavedData();
+
+
+        PushCommand(string.Format("CREATE TABLE IF NOT EXISTS \"Scores\" (\r\n\t\"Run\"\tINTEGER NOT NULL UNIQUE,\r\n\t\"Time\"\tREAL,\r\n\tPRIMARY KEY(\"Run\")\r\n)"), connection);
+        scores.text = "This Worked";
+
+
+    IDataReader dataReader = ReadSavedData();
 
         while (dataReader.Read())
         {
