@@ -32,7 +32,7 @@ public class SettingsMenu : MonoBehaviour
         while (dataReader.Read())
         {
 
-            // playerTransform.position = new Vector3(dataReader.GetFloat(1), dataReader.GetFloat(2), dataReader.GetFloat(3));
+      
             musicSlider.value = dataReader.GetFloat(1);
             soundSlider.value = dataReader.GetFloat(2);
             audioMixer.SetFloat("musicVolume", Mathf.Log10(dataReader.GetFloat(1)) * 20);

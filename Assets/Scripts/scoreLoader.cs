@@ -35,14 +35,19 @@ public class scoreLoader : MonoBehaviour
                 connection.Open();
                 PushCommand(string.Format("CREATE TABLE IF NOT EXISTS \"Scores\" (\r\n\t\"Run\"\tINTEGER NOT NULL UNIQUE,\r\n\t\"Time\"\tREAL,\r\n\tPRIMARY KEY(\"Run\")\r\n)"), connection);
                 PushCommand(string.Format("CREATE TABLE IF NOT EXISTS \"Settings\" (\r\n\t\"Current\"\tINTEGER UNIQUE,\r\n\t\"music\"\tNUMERIC,\r\n\t\"sound\"\tNUMERIC,\r\n\tPRIMARY KEY(\"Current\")\r\n)"), connection);
-                
+
 
 
 
                 connection.Close();
-
-
             }
+
+
+
+
+
+
+
 
         }
         catch(Exception e)
@@ -64,6 +69,7 @@ public class scoreLoader : MonoBehaviour
 
         
         PushCommand(string.Format("CREATE TABLE IF NOT EXISTS \"Scores\" (\r\n\t\"Run\"\tINTEGER NOT NULL UNIQUE,\r\n\t\"Time\"\tREAL,\r\n\tPRIMARY KEY(\"Run\")\r\n)"), connection);
+        PushCommand(string.Format("CREATE TABLE IF NOT EXISTS \"Settings\" (\r\n\t\"Current\"\tINTEGER UNIQUE,\r\n\t\"music\"\tNUMERIC,\r\n\t\"sound\"\tNUMERIC,\r\n\tPRIMARY KEY(\"Current\")\r\n)"), connection);
         scores.text = "This Worked 3";
 
 

@@ -20,11 +20,7 @@ public class EndGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        connection = new SqliteConnection(string.Format("URI=file:Assets/Streaming Assets/{0}.db", dbName));
-        connection.Open();
-
-        PushCommand(string.Format("CREATE TABLE IF NOT EXISTS \"Scores\" (\r\n\t\"Run\"\tINTEGER NOT NULL UNIQUE,\r\n\t\"Time\"\tREAL,\r\n\tPRIMARY KEY(\"Run\")\r\n)"), connection);
-        connection.Close();
+       
     }
 
     // Update is called once per frame
