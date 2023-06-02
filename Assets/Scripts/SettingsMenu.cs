@@ -23,24 +23,12 @@ public class SettingsMenu : MonoBehaviour
     void Start ()
     {
         //Gets volumes from database, puts them into the audiomixer
-        connection = new SqliteConnection("Data Source=" + Application.dataPath + "\\StreamingAssets\\" + dbName + ".db");
+        
 
-        connection.Open();
-
-        IDataReader dataReader = ReadSavedData();
-
-        while (dataReader.Read())
-        {
-
-      
-            musicSlider.value = dataReader.GetFloat(1);
-            soundSlider.value = dataReader.GetFloat(2);
-            audioMixer.SetFloat("musicVolume", Mathf.Log10(dataReader.GetFloat(1)) * 20);
-            audioMixer.SetFloat("soundsVolume", Mathf.Log10(dataReader.GetFloat(2)) * 20);
-
-
-        }
-        connection.Close();
+        musicSlider.value = PlayerPrefs.GetFloat("music");
+        soundSlider.value = PlayerPrefs.GetFloat("sound");
+        audioMixer.SetFloat("musicVolume", Mathf.Log10(PlayerPrefs.GetFloat("music")) * 20);
+        audioMixer.SetFloat("soundsVolume", Mathf.Log10(PlayerPrefs.GetFloat("sound")) * 20);
 
 
 
@@ -144,17 +132,13 @@ public class SettingsMenu : MonoBehaviour
         float music = musicSlider.value;
         float sound = soundSlider.value;
 
-        connection = new SqliteConnection("Data Source=" + Application.dataPath + "\\StreamingAssets\\" + dbName + ".db");
-        connection.Open();
-     
-        PushCommand(string.Format("UPDATE Settings SET music = {0}, sound = {1}  WHERE Current = 1;", music, sound), connection);
-        
-        
-        
+
+        PlayerPrefs.SetFloat("music", music);
+        PlayerPrefs.SetFloat("sound", sound);
 
 
-     
-        connection.Close();
+
+        
 
 
     }
